@@ -44,45 +44,50 @@
             // 
             LoginLabel.AutoSize = true;
             LoginLabel.Font = new Font("Times New Roman", 19.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            LoginLabel.Location = new Point(34, 178);
-            LoginLabel.Margin = new Padding(2, 0, 2, 0);
+            LoginLabel.Location = new Point(63, 380);
+            LoginLabel.Margin = new Padding(4, 0, 4, 0);
             LoginLabel.Name = "LoginLabel";
-            LoginLabel.Size = new Size(331, 31);
+            LoginLabel.Size = new Size(639, 61);
             LoginLabel.TabIndex = 0;
             LoginLabel.Text = "ĐĂNG NHẬP HỆ THỐNG";
             // 
             // LogoPictureBox
             // 
             LogoPictureBox.Image = (Image)resources.GetObject("LogoPictureBox.Image");
-            LogoPictureBox.Location = new Point(127, 38);
-            LogoPictureBox.Margin = new Padding(2, 1, 2, 1);
+            LogoPictureBox.Location = new Point(236, 81);
+            LogoPictureBox.Margin = new Padding(4, 2, 4, 2);
             LogoPictureBox.Name = "LogoPictureBox";
-            LogoPictureBox.Size = new Size(146, 116);
+            LogoPictureBox.Size = new Size(271, 247);
             LogoPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             LogoPictureBox.TabIndex = 1;
             LogoPictureBox.TabStop = false;
             // 
             // usernameBox
             // 
-            usernameBox.Location = new Point(34, 249);
+            usernameBox.Location = new Point(63, 531);
+            usernameBox.Margin = new Padding(6);
             usernameBox.Name = "usernameBox";
-            usernameBox.Size = new Size(331, 23);
+            usernameBox.Size = new Size(611, 39);
             usernameBox.TabIndex = 3;
             // 
             // passwordBox
             // 
-            passwordBox.Location = new Point(34, 318);
+            passwordBox.Location = new Point(63, 678);
+            passwordBox.Margin = new Padding(6);
             passwordBox.Name = "passwordBox";
-            passwordBox.Size = new Size(331, 23);
+            passwordBox.PasswordChar = '*';
+            passwordBox.Size = new Size(611, 39);
             passwordBox.TabIndex = 4;
+            passwordBox.UseSystemPasswordChar = true;
             // 
             // usernameLabel
             // 
             usernameLabel.AutoSize = true;
             usernameLabel.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            usernameLabel.Location = new Point(34, 224);
+            usernameLabel.Location = new Point(63, 478);
+            usernameLabel.Margin = new Padding(6, 0, 6, 0);
             usernameLabel.Name = "usernameLabel";
-            usernameLabel.Size = new Size(133, 22);
+            usernameLabel.Size = new Size(258, 44);
             usernameLabel.TabIndex = 5;
             usernameLabel.Text = "Tên đăng nhập";
             // 
@@ -90,18 +95,20 @@
             // 
             passwordLabel.AutoSize = true;
             passwordLabel.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            passwordLabel.Location = new Point(34, 293);
+            passwordLabel.Location = new Point(63, 625);
+            passwordLabel.Margin = new Padding(6, 0, 6, 0);
             passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new Size(88, 22);
+            passwordLabel.Size = new Size(173, 44);
             passwordLabel.TabIndex = 6;
             passwordLabel.Text = "Mật khẩu";
             // 
             // LoginButton
             // 
             LoginButton.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            LoginButton.Location = new Point(34, 372);
+            LoginButton.Location = new Point(63, 794);
+            LoginButton.Margin = new Padding(6);
             LoginButton.Name = "LoginButton";
-            LoginButton.Size = new Size(156, 44);
+            LoginButton.Size = new Size(290, 94);
             LoginButton.TabIndex = 7;
             LoginButton.Text = "Đăng nhập";
             LoginButton.UseVisualStyleBackColor = true;
@@ -110,9 +117,10 @@
             // ExitButton
             // 
             ExitButton.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ExitButton.Location = new Point(207, 372);
+            ExitButton.Location = new Point(384, 794);
+            ExitButton.Margin = new Padding(6);
             ExitButton.Name = "ExitButton";
-            ExitButton.Size = new Size(158, 44);
+            ExitButton.Size = new Size(293, 94);
             ExitButton.TabIndex = 8;
             ExitButton.Text = "Thoát";
             ExitButton.UseVisualStyleBackColor = true;
@@ -120,9 +128,9 @@
             // 
             // StartPage
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(401, 445);
+            ClientSize = new Size(745, 949);
             Controls.Add(ExitButton);
             Controls.Add(LoginButton);
             Controls.Add(passwordLabel);
@@ -131,11 +139,12 @@
             Controls.Add(usernameBox);
             Controls.Add(LogoPictureBox);
             Controls.Add(LoginLabel);
-            Margin = new Padding(2, 1, 2, 1);
+            Margin = new Padding(4, 2, 4, 2);
             MaximizeBox = false;
             Name = "StartPage";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Đăng nhập";
+            Text = "Đăng Nhập";
+            Enter += LoginButton_Click;
             ((System.ComponentModel.ISupportInitialize)LogoPictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();

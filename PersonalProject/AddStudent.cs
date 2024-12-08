@@ -19,7 +19,7 @@ namespace PersonalProject
         }
         bool isValid()
         {
-            if (idBox.Text == "" || nameBox.Text == "" || majorBox.Text == "" || scoreBox.Text == "") return false;
+            if (idBox.Text == "" || nameBox.Text == "" || majorBox.Text == "" || scoreBox.Text == "" || trainingPointBox.Text == "") return false;
             foreach (char c in idBox.Text)
             {
                 if (c - '0' < 0 || c - '0' > 9)
@@ -47,6 +47,17 @@ namespace PersonalProject
                 scoreBox.Text = "";
                 return false;
             }
+            int tmp2;
+            if (!int.TryParse(trainingPointBox.Text, out tmp2))
+            {
+                trainingPointBox.Text = "";
+                return false;
+            }
+            if (tmp2 < 0 || tmp2 > 100)
+            {
+                trainingPointBox.Text = "";
+                return false;
+            }
             return true;
         }
 
@@ -54,7 +65,7 @@ namespace PersonalProject
         {
             if (isValid())
             {
-                newStudent = new Student(idBox.Text, nameBox.Text, majorBox.Text, double.Parse(scoreBox.Text));
+                newStudent = new Student(idBox.Text, nameBox.Text, majorBox.Text, double.Parse(scoreBox.Text), int.Parse(trainingPointBox.Text));
                 this.Close();
             }
             else MessageBox.Show("Thông tin bạn vừa nhập sai hoặc bạn chưa nhập thông tin!");

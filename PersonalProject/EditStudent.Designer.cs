@@ -1,6 +1,6 @@
 ﻿namespace PersonalProject
 {
-    partial class AddStudent
+    partial class EditStudent
     {
         /// <summary>
         /// Required designer variable.
@@ -36,7 +36,7 @@
             scoreLabel = new Label();
             scoreBox = new TextBox();
             exitButton = new Button();
-            addButton = new Button();
+            EditButton = new Button();
             majorBox = new ComboBox();
             trainingPointLabel = new Label();
             trainingPointBox = new TextBox();
@@ -118,17 +118,17 @@
             exitButton.UseVisualStyleBackColor = false;
             exitButton.Click += exitButton_Click;
             // 
-            // addButton
+            // EditButton
             // 
-            addButton.BackColor = Color.DarkSeaGreen;
-            addButton.Font = new Font("Arial", 13.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            addButton.Location = new Point(767, 538);
-            addButton.Name = "addButton";
-            addButton.Size = new Size(244, 80);
-            addButton.TabIndex = 10;
-            addButton.Text = "Thêm";
-            addButton.UseVisualStyleBackColor = false;
-            addButton.Click += addButton_Click;
+            EditButton.BackColor = Color.DarkSeaGreen;
+            EditButton.Font = new Font("Arial", 13.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            EditButton.Location = new Point(767, 538);
+            EditButton.Name = "EditButton";
+            EditButton.Size = new Size(244, 80);
+            EditButton.TabIndex = 10;
+            EditButton.Text = "Lưu";
+            EditButton.UseVisualStyleBackColor = false;
+            EditButton.Click += EditButton_Click;
             // 
             // majorBox
             // 
@@ -157,7 +157,7 @@
             trainingPointBox.Size = new Size(201, 39);
             trainingPointBox.TabIndex = 13;
             // 
-            // AddStudent
+            // EditStudent
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -165,7 +165,7 @@
             Controls.Add(trainingPointBox);
             Controls.Add(trainingPointLabel);
             Controls.Add(majorBox);
-            Controls.Add(addButton);
+            Controls.Add(EditButton);
             Controls.Add(exitButton);
             Controls.Add(scoreBox);
             Controls.Add(scoreLabel);
@@ -174,8 +174,9 @@
             Controls.Add(nameBox);
             Controls.Add(idBox);
             Controls.Add(idLabel);
-            Name = "AddStudent";
-            Text = "Thêm Sinh Viên";
+            Name = "EditStudent";
+            Text = "Sửa thông tin Sinh Viên";
+            Load += EditStudent_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -190,7 +191,7 @@
         private Label scoreLabel;
         private TextBox scoreBox;
         private Button exitButton;
-        private Button addButton;
+        private Button EditButton;
         private ComboBox majorBox;
         private Label trainingPointLabel;
         private TextBox trainingPointBox;

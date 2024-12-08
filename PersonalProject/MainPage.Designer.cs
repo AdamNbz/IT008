@@ -30,9 +30,12 @@ namespace PersonalProject
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             menuStrip1 = new MenuStrip();
             preferenceMenu = new ToolStripMenuItem();
             AddMenu = new ToolStripMenuItem();
+            chỉnhSửaToolStripMenuItem = new ToolStripMenuItem();
+            xoáToolStripMenuItem = new ToolStripMenuItem();
             ExitMenu = new ToolStripMenuItem();
             toolStrip1 = new ToolStrip();
             addButton = new ToolStripButton();
@@ -40,12 +43,18 @@ namespace PersonalProject
             toolStripSeparator1 = new ToolStripSeparator();
             searchBox = new ToolStripTextBox();
             searchLabel = new ToolStripLabel();
+            EditButton = new ToolStripButton();
+            EditLabel = new ToolStripLabel();
+            toolStripSeparator2 = new ToolStripSeparator();
+            DeleteButton = new ToolStripButton();
+            DeleteLabel = new ToolStripLabel();
             studentList = new DataGridView();
             ListOrder = new DataGridViewTextBoxColumn();
             studentID = new DataGridViewTextBoxColumn();
             studentName = new DataGridViewTextBoxColumn();
             studentDepartment = new DataGridViewTextBoxColumn();
             studentScore = new DataGridViewTextBoxColumn();
+            TrainingPoint = new DataGridViewTextBoxColumn();
             menuStrip1.SuspendLayout();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)studentList).BeginInit();
@@ -57,38 +66,54 @@ namespace PersonalProject
             menuStrip1.Items.AddRange(new ToolStripItem[] { preferenceMenu });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(752, 24);
+            menuStrip1.Padding = new Padding(11, 4, 0, 4);
+            menuStrip1.Size = new Size(1397, 44);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // preferenceMenu
             // 
-            preferenceMenu.DropDownItems.AddRange(new ToolStripItem[] { AddMenu, ExitMenu });
+            preferenceMenu.DropDownItems.AddRange(new ToolStripItem[] { AddMenu, chỉnhSửaToolStripMenuItem, xoáToolStripMenuItem, ExitMenu });
             preferenceMenu.Name = "preferenceMenu";
-            preferenceMenu.Size = new Size(79, 20);
+            preferenceMenu.Size = new Size(153, 36);
             preferenceMenu.Text = "Chức Năng";
             // 
             // AddMenu
             // 
             AddMenu.Name = "AddMenu";
-            AddMenu.Size = new Size(128, 22);
+            AddMenu.Size = new Size(359, 44);
             AddMenu.Text = "Thêm mới";
             AddMenu.Click += AddMenu_Click;
+            // 
+            // chỉnhSửaToolStripMenuItem
+            // 
+            chỉnhSửaToolStripMenuItem.Name = "chỉnhSửaToolStripMenuItem";
+            chỉnhSửaToolStripMenuItem.Size = new Size(359, 44);
+            chỉnhSửaToolStripMenuItem.Text = "Chỉnh sửa";
+            chỉnhSửaToolStripMenuItem.Click += chỉnhSửaToolStripMenuItem_Click;
+            // 
+            // xoáToolStripMenuItem
+            // 
+            xoáToolStripMenuItem.Name = "xoáToolStripMenuItem";
+            xoáToolStripMenuItem.Size = new Size(359, 44);
+            xoáToolStripMenuItem.Text = "Xoá";
+            xoáToolStripMenuItem.Click += xoáToolStripMenuItem_Click;
             // 
             // ExitMenu
             // 
             ExitMenu.Name = "ExitMenu";
-            ExitMenu.Size = new Size(128, 22);
+            ExitMenu.Size = new Size(359, 44);
             ExitMenu.Text = "Thoát";
             ExitMenu.Click += ExitMenu_Click;
             // 
             // toolStrip1
             // 
             toolStrip1.ImageScalingSize = new Size(32, 32);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { addButton, AddLabel, toolStripSeparator1, searchBox, searchLabel });
-            toolStrip1.Location = new Point(0, 24);
+            toolStrip1.Items.AddRange(new ToolStripItem[] { addButton, AddLabel, toolStripSeparator1, searchBox, searchLabel, EditButton, EditLabel, toolStripSeparator2, DeleteButton, DeleteLabel });
+            toolStrip1.Location = new Point(0, 44);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(752, 44);
+            toolStrip1.Padding = new Padding(0, 0, 4, 0);
+            toolStrip1.Size = new Size(1397, 47);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -98,7 +123,7 @@ namespace PersonalProject
             addButton.Image = Properties.Resources.add;
             addButton.ImageTransparentColor = Color.Magenta;
             addButton.Name = "addButton";
-            addButton.Size = new Size(36, 41);
+            addButton.Size = new Size(46, 41);
             addButton.Text = "Thêm mới";
             addButton.Click += addButton_Click;
             // 
@@ -109,19 +134,18 @@ namespace PersonalProject
             AddLabel.Name = "AddLabel";
             AddLabel.Size = new Size(153, 41);
             AddLabel.Text = "Thêm Mới";
-            AddLabel.Click += addLabel_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(6, 44);
+            toolStripSeparator1.Size = new Size(6, 47);
             // 
             // searchBox
             // 
             searchBox.Alignment = ToolStripItemAlignment.Right;
             searchBox.AutoSize = false;
             searchBox.Name = "searchBox";
-            searchBox.Size = new Size(300, 23);
+            searchBox.Size = new Size(554, 39);
             searchBox.TextChanged += searchBox_TextChanged;
             // 
             // searchLabel
@@ -129,20 +153,60 @@ namespace PersonalProject
             searchLabel.Alignment = ToolStripItemAlignment.Right;
             searchLabel.Font = new Font("Segoe UI", 9F);
             searchLabel.Name = "searchLabel";
-            searchLabel.Size = new Size(103, 41);
+            searchLabel.Size = new Size(211, 41);
             searchLabel.Text = "Tìm kiếm theo tên";
+            // 
+            // EditButton
+            // 
+            EditButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            EditButton.Image = (Image)resources.GetObject("EditButton.Image");
+            EditButton.ImageTransparentColor = Color.Magenta;
+            EditButton.Name = "EditButton";
+            EditButton.Size = new Size(46, 41);
+            EditButton.Text = "Sửa";
+            EditButton.Click += EditButton_Click;
+            // 
+            // EditLabel
+            // 
+            EditLabel.Font = new Font("Segoe UI", 11.25F);
+            EditLabel.Name = "EditLabel";
+            EditLabel.Size = new Size(67, 41);
+            EditLabel.Text = "Sửa";
+            // 
+            // toolStripSeparator2
+            // 
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(6, 47);
+            // 
+            // DeleteButton
+            // 
+            DeleteButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            DeleteButton.Image = (Image)resources.GetObject("DeleteButton.Image");
+            DeleteButton.ImageTransparentColor = Color.Magenta;
+            DeleteButton.Name = "DeleteButton";
+            DeleteButton.Size = new Size(46, 41);
+            DeleteButton.Text = "Xoá";
+            DeleteButton.Click += DeleteButton_Click;
+            // 
+            // DeleteLabel
+            // 
+            DeleteLabel.Font = new Font("Segoe UI", 11.25F);
+            DeleteLabel.Name = "DeleteLabel";
+            DeleteLabel.Size = new Size(69, 41);
+            DeleteLabel.Text = "Xoá";
             // 
             // studentList
             // 
             studentList.AllowUserToAddRows = false;
             studentList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            studentList.Columns.AddRange(new DataGridViewColumn[] { ListOrder, studentID, studentName, studentDepartment, studentScore });
+            studentList.Columns.AddRange(new DataGridViewColumn[] { ListOrder, studentID, studentName, studentDepartment, studentScore, TrainingPoint });
             studentList.Dock = DockStyle.Fill;
-            studentList.Location = new Point(0, 68);
+            studentList.Location = new Point(0, 91);
+            studentList.Margin = new Padding(6);
             studentList.Name = "studentList";
             studentList.RowHeadersWidth = 82;
             studentList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            studentList.Size = new Size(752, 339);
+            studentList.Size = new Size(1397, 777);
             studentList.TabIndex = 2;
             // 
             // ListOrder
@@ -185,16 +249,23 @@ namespace PersonalProject
             studentScore.Name = "studentScore";
             studentScore.ReadOnly = true;
             // 
+            // TrainingPoint
+            // 
+            TrainingPoint.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            TrainingPoint.HeaderText = "ĐRL";
+            TrainingPoint.MinimumWidth = 10;
+            TrainingPoint.Name = "TrainingPoint";
+            // 
             // MainPage
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(752, 407);
+            ClientSize = new Size(1397, 868);
             Controls.Add(studentList);
             Controls.Add(toolStrip1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Margin = new Padding(2, 1, 2, 1);
+            Margin = new Padding(4, 2, 4, 2);
             Name = "MainPage";
             Text = "Quản Lý Sinh Viên";
             FormClosed += FormClosed_Click;
@@ -225,5 +296,13 @@ namespace PersonalProject
         private DataGridViewTextBoxColumn studentName;
         private DataGridViewTextBoxColumn studentDepartment;
         private DataGridViewTextBoxColumn studentScore;
+        private DataGridViewTextBoxColumn TrainingPoint;
+        private ToolStripButton EditButton;
+        private ToolStripLabel EditLabel;
+        private ToolStripSeparator toolStripSeparator2;
+        private ToolStripButton DeleteButton;
+        private ToolStripLabel DeleteLabel;
+        private ToolStripMenuItem chỉnhSửaToolStripMenuItem;
+        private ToolStripMenuItem xoáToolStripMenuItem;
     }
 }

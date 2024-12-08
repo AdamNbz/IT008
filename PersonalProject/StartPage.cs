@@ -14,7 +14,6 @@
 
             if (username == "admin" && password == "12345")
             {
-                MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MainPage main = new MainPage();
                 main.Show();
                 this.Hide();
@@ -26,6 +25,7 @@
             else
             {
                 MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                password = "";
             }
         }
 

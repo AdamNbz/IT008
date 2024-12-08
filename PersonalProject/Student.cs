@@ -10,12 +10,14 @@ namespace PersonalProject
     {
         public string name, id, department;
         public double score;
-        public Student(string id, string name, string department, double score)
+        public int tp;
+        public Student(string id, string name, string department, double score, int tp)
         {
             this.name = name;
             this.id = id;
             this.department = department;
             this.score = score;
+            this.tp = tp;
         }
     }
 }
