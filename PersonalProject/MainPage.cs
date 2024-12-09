@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OfficeOpenXml;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -98,6 +99,83 @@ namespace PersonalProject
         private void xoáToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DeleteButton_Click(sender, e);
+        }
+
+        private void ImportButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (OpenFileDialog openFileDialog = new OpenFileDialog() { Filter = "Excel Workbook|*.xlsx" })
+                {
+                    if (openFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        FileInfo existingFile = new FileInfo(openFileDialog.FileName);
+                        using (ExcelPackage package = new ExcelPackage(existingFile))
+                        {
+                            ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
+                            DataTable dt = new DataTable();
+                            foreach (var firstRowCell in worksheet.Cells[1, 1, 1, worksheet.Dimension.End.Column])
+                            {
+                                dt.Columns.Add(firstRowCell.Text);
+                            }
+                            for (int rowNum = 2; rowNum <= worksheet.Dimension.End.Row; rowNum++)
+                            {
+                                ExcelRange wsRow = worksheet.Cells[rowNum, 1, rowNum, worksheet.Dimension.End.Column];
+                                DataRow row = dt.NewRow();
+                                int columnIndex = 0;
+                                foreach (var cell in wsRow)
+                                {
+                                    row[columnIndex] = cell.Text;
+                                    columnIndex++;
+                                }
+                                dt.Rows.Add(row);
+                            }
+                            studentList.DataSource = dt;
+
+                            MessageBox.Show("Nhập file Excel thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi nhập file Excel: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ExportButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SaveFileDialog saveFileDialog = new SaveFileDialog() { Filter = "Excel Workbook|*.xlsx" })
+                {
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        using (ExcelPackage package = new ExcelPackage())
+                        {
+                            ExcelWorksheet worksheet = package.Workbook.Worksheets.Add("SinhVien");
+                            for (int i = 0; i < studentList.Columns.Count; i++)
+                            {
+                                worksheet.Cells[1, i + 1].Value = studentList.Columns[i].HeaderText;
+                            }
+                            for (int i = 0; i < studentList.Rows.Count; i++)
+                            {
+                                for (int j = 0; j < studentList.Columns.Count; j++)
+                                {
+                                    worksheet.Cells[i + 2, j + 1].Value = studentList.Rows[i].Cells[j].Value?.ToString();
+                                }
+                            }
+                            FileInfo fi = new FileInfo(saveFileDialog.FileName);
+                            package.SaveAs(fi);
+                            MessageBox.Show("Xuất file Excel thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi xuất file Excel: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

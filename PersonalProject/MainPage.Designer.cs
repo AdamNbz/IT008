@@ -48,6 +48,9 @@ namespace PersonalProject
             toolStripSeparator2 = new ToolStripSeparator();
             DeleteButton = new ToolStripButton();
             DeleteLabel = new ToolStripLabel();
+            toolStripSeparator3 = new ToolStripSeparator();
+            ImportButton = new ToolStripButton();
+            ExportButton = new ToolStripButton();
             studentList = new DataGridView();
             ListOrder = new DataGridViewTextBoxColumn();
             studentID = new DataGridViewTextBoxColumn();
@@ -81,35 +84,35 @@ namespace PersonalProject
             // AddMenu
             // 
             AddMenu.Name = "AddMenu";
-            AddMenu.Size = new Size(359, 44);
+            AddMenu.Size = new Size(256, 44);
             AddMenu.Text = "Thêm mới";
             AddMenu.Click += AddMenu_Click;
             // 
             // chỉnhSửaToolStripMenuItem
             // 
             chỉnhSửaToolStripMenuItem.Name = "chỉnhSửaToolStripMenuItem";
-            chỉnhSửaToolStripMenuItem.Size = new Size(359, 44);
+            chỉnhSửaToolStripMenuItem.Size = new Size(256, 44);
             chỉnhSửaToolStripMenuItem.Text = "Chỉnh sửa";
             chỉnhSửaToolStripMenuItem.Click += chỉnhSửaToolStripMenuItem_Click;
             // 
             // xoáToolStripMenuItem
             // 
             xoáToolStripMenuItem.Name = "xoáToolStripMenuItem";
-            xoáToolStripMenuItem.Size = new Size(359, 44);
+            xoáToolStripMenuItem.Size = new Size(256, 44);
             xoáToolStripMenuItem.Text = "Xoá";
             xoáToolStripMenuItem.Click += xoáToolStripMenuItem_Click;
             // 
             // ExitMenu
             // 
             ExitMenu.Name = "ExitMenu";
-            ExitMenu.Size = new Size(359, 44);
+            ExitMenu.Size = new Size(256, 44);
             ExitMenu.Text = "Thoát";
             ExitMenu.Click += ExitMenu_Click;
             // 
             // toolStrip1
             // 
             toolStrip1.ImageScalingSize = new Size(32, 32);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { addButton, AddLabel, toolStripSeparator1, searchBox, searchLabel, EditButton, EditLabel, toolStripSeparator2, DeleteButton, DeleteLabel });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { addButton, AddLabel, toolStripSeparator1, searchBox, searchLabel, EditButton, EditLabel, toolStripSeparator2, DeleteButton, DeleteLabel, toolStripSeparator3, ImportButton, ExportButton });
             toolStrip1.Location = new Point(0, 44);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Padding = new Padding(0, 0, 4, 0);
@@ -194,6 +197,31 @@ namespace PersonalProject
             DeleteLabel.Name = "DeleteLabel";
             DeleteLabel.Size = new Size(69, 41);
             DeleteLabel.Text = "Xoá";
+            // 
+            // toolStripSeparator3
+            // 
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(6, 47);
+            // 
+            // ImportButton
+            // 
+            ImportButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            ImportButton.Image = (Image)resources.GetObject("ImportButton.Image");
+            ImportButton.ImageTransparentColor = Color.Magenta;
+            ImportButton.Name = "ImportButton";
+            ImportButton.Size = new Size(46, 41);
+            ImportButton.Text = "Import";
+            ImportButton.Click += ImportButton_Click;
+            // 
+            // ExportButton
+            // 
+            ExportButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            ExportButton.Image = (Image)resources.GetObject("ExportButton.Image");
+            ExportButton.ImageTransparentColor = Color.Magenta;
+            ExportButton.Name = "ExportButton";
+            ExportButton.Size = new Size(46, 41);
+            ExportButton.Text = "Export";
+            ExportButton.Click += ExportButton_Click;
             // 
             // studentList
             // 
@@ -304,5 +332,8 @@ namespace PersonalProject
         private ToolStripLabel DeleteLabel;
         private ToolStripMenuItem chỉnhSửaToolStripMenuItem;
         private ToolStripMenuItem xoáToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator3;
+        private ToolStripButton ImportButton;
+        private ToolStripButton ExportButton;
     }
 }
