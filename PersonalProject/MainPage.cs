@@ -103,50 +103,45 @@ namespace PersonalProject
 
         private void ImportButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                using (OpenFileDialog openFileDialog = new OpenFileDialog() { Filter = "Excel Workbook|*.xlsx" })
-                {
-                    if (openFileDialog.ShowDialog() == DialogResult.OK)
-                    {
-                        FileInfo existingFile = new FileInfo(openFileDialog.FileName);
-                        using (ExcelPackage package = new ExcelPackage(existingFile))
-                        {
-                            ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
-                            DataTable dt = new DataTable();
-                            foreach (var firstRowCell in worksheet.Cells[1, 1, 1, worksheet.Dimension.End.Column])
-                            {
-                                dt.Columns.Add(firstRowCell.Text);
-                            }
-                            for (int rowNum = 2; rowNum <= worksheet.Dimension.End.Row; rowNum++)
-                            {
-                                ExcelRange wsRow = worksheet.Cells[rowNum, 1, rowNum, worksheet.Dimension.End.Column];
-                                DataRow row = dt.NewRow();
-                                int columnIndex = 0;
-                                foreach (var cell in wsRow)
-                                {
-                                    row[columnIndex] = cell.Text;
-                                    columnIndex++;
-                                }
-                                dt.Rows.Add(row);
-                            }
-                            studentList.DataSource = dt;
 
-                            MessageBox.Show("Nhập file Excel thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            OpenFileDialog fo = new OpenFileDialog { Filter = "Excel Files|*.xlsx", Title = "Mở File Excel" };
+            if (fo.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+                    using (ExcelPackage package = new ExcelPackage(new FileInfo(fo.FileName)))
+                    {
+                        ExcelWorksheet worksheet = package.Workbook.Worksheets.First();
+                        int rowCount = worksheet.Dimension.Rows;
+
+                        for (int row = 2; row <= rowCount; row++)
+                        {
+                            string id = worksheet.Cells[row, 1].Value?.ToString();
+                            string name = worksheet.Cells[row, 2].Value?.ToString();
+                            string department = worksheet.Cells[row, 3].Value?.ToString();
+                            double score = double.Parse(worksheet.Cells[row, 4].Value?.ToString() ?? "0");
+                            int tp = int.Parse(worksheet.Cells[row, 5].Value?.ToString() ?? "0");
+
+                            studentList.Rows.Add(cnt++, id, name, department, score, tp);
                         }
+
+                        MessageBox.Show("Import dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi khi nhập file Excel: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi nhập dữ liệu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
+
 
         private void ExportButton_Click(object sender, EventArgs e)
         {
             try
             {
+                ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
                 using (SaveFileDialog saveFileDialog = new SaveFileDialog() { Filter = "Excel Workbook|*.xlsx" })
                 {
                     if (saveFileDialog.ShowDialog() == DialogResult.OK)
@@ -154,10 +149,14 @@ namespace PersonalProject
                         using (ExcelPackage package = new ExcelPackage())
                         {
                             ExcelWorksheet worksheet = package.Workbook.Worksheets.Add("SinhVien");
+
+                            // Add headers
                             for (int i = 0; i < studentList.Columns.Count; i++)
                             {
                                 worksheet.Cells[1, i + 1].Value = studentList.Columns[i].HeaderText;
                             }
+
+                            // Add data
                             for (int i = 0; i < studentList.Rows.Count; i++)
                             {
                                 for (int j = 0; j < studentList.Columns.Count; j++)
@@ -165,8 +164,10 @@ namespace PersonalProject
                                     worksheet.Cells[i + 2, j + 1].Value = studentList.Rows[i].Cells[j].Value?.ToString();
                                 }
                             }
-                            FileInfo fi = new FileInfo(saveFileDialog.FileName);
-                            package.SaveAs(fi);
+
+                            worksheet.Cells[worksheet.Dimension.Address].AutoFitColumns();
+                            package.SaveAs(new FileInfo(saveFileDialog.FileName));
+
                             MessageBox.Show("Xuất file Excel thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
@@ -176,6 +177,16 @@ namespace PersonalProject
             {
                 MessageBox.Show("Lỗi khi xuất file Excel: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void nhậpFileExcelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ImportButton_Click(sender, e);
+        }
+
+        private void xuấtFileExcelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExportButton_Click(sender, e);
         }
     }
 }

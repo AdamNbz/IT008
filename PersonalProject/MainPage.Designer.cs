@@ -36,6 +36,8 @@ namespace PersonalProject
             AddMenu = new ToolStripMenuItem();
             chỉnhSửaToolStripMenuItem = new ToolStripMenuItem();
             xoáToolStripMenuItem = new ToolStripMenuItem();
+            nhậpFileExcelToolStripMenuItem = new ToolStripMenuItem();
+            xuấtFileExcelToolStripMenuItem = new ToolStripMenuItem();
             ExitMenu = new ToolStripMenuItem();
             toolStrip1 = new ToolStrip();
             addButton = new ToolStripButton();
@@ -70,42 +72,56 @@ namespace PersonalProject
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(11, 4, 0, 4);
-            menuStrip1.Size = new Size(1397, 44);
+            menuStrip1.Size = new Size(1397, 46);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // preferenceMenu
             // 
-            preferenceMenu.DropDownItems.AddRange(new ToolStripItem[] { AddMenu, chỉnhSửaToolStripMenuItem, xoáToolStripMenuItem, ExitMenu });
+            preferenceMenu.DropDownItems.AddRange(new ToolStripItem[] { AddMenu, chỉnhSửaToolStripMenuItem, xoáToolStripMenuItem, nhậpFileExcelToolStripMenuItem, xuấtFileExcelToolStripMenuItem, ExitMenu });
             preferenceMenu.Name = "preferenceMenu";
-            preferenceMenu.Size = new Size(153, 36);
+            preferenceMenu.Size = new Size(153, 38);
             preferenceMenu.Text = "Chức Năng";
             // 
             // AddMenu
             // 
             AddMenu.Name = "AddMenu";
-            AddMenu.Size = new Size(256, 44);
+            AddMenu.Size = new Size(324, 44);
             AddMenu.Text = "Thêm mới";
             AddMenu.Click += AddMenu_Click;
             // 
             // chỉnhSửaToolStripMenuItem
             // 
             chỉnhSửaToolStripMenuItem.Name = "chỉnhSửaToolStripMenuItem";
-            chỉnhSửaToolStripMenuItem.Size = new Size(256, 44);
+            chỉnhSửaToolStripMenuItem.Size = new Size(324, 44);
             chỉnhSửaToolStripMenuItem.Text = "Chỉnh sửa";
             chỉnhSửaToolStripMenuItem.Click += chỉnhSửaToolStripMenuItem_Click;
             // 
             // xoáToolStripMenuItem
             // 
             xoáToolStripMenuItem.Name = "xoáToolStripMenuItem";
-            xoáToolStripMenuItem.Size = new Size(256, 44);
+            xoáToolStripMenuItem.Size = new Size(324, 44);
             xoáToolStripMenuItem.Text = "Xoá";
             xoáToolStripMenuItem.Click += xoáToolStripMenuItem_Click;
+            // 
+            // nhậpFileExcelToolStripMenuItem
+            // 
+            nhậpFileExcelToolStripMenuItem.Name = "nhậpFileExcelToolStripMenuItem";
+            nhậpFileExcelToolStripMenuItem.Size = new Size(324, 44);
+            nhậpFileExcelToolStripMenuItem.Text = "Nhập File Excel...";
+            nhậpFileExcelToolStripMenuItem.Click += nhậpFileExcelToolStripMenuItem_Click;
+            // 
+            // xuấtFileExcelToolStripMenuItem
+            // 
+            xuấtFileExcelToolStripMenuItem.Name = "xuấtFileExcelToolStripMenuItem";
+            xuấtFileExcelToolStripMenuItem.Size = new Size(324, 44);
+            xuấtFileExcelToolStripMenuItem.Text = "Xuất File Excel...";
+            xuấtFileExcelToolStripMenuItem.Click += xuấtFileExcelToolStripMenuItem_Click;
             // 
             // ExitMenu
             // 
             ExitMenu.Name = "ExitMenu";
-            ExitMenu.Size = new Size(256, 44);
+            ExitMenu.Size = new Size(324, 44);
             ExitMenu.Text = "Thoát";
             ExitMenu.Click += ExitMenu_Click;
             // 
@@ -113,7 +129,7 @@ namespace PersonalProject
             // 
             toolStrip1.ImageScalingSize = new Size(32, 32);
             toolStrip1.Items.AddRange(new ToolStripItem[] { addButton, AddLabel, toolStripSeparator1, searchBox, searchLabel, EditButton, EditLabel, toolStripSeparator2, DeleteButton, DeleteLabel, toolStripSeparator3, ImportButton, ExportButton });
-            toolStrip1.Location = new Point(0, 44);
+            toolStrip1.Location = new Point(0, 46);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Padding = new Padding(0, 0, 4, 0);
             toolStrip1.Size = new Size(1397, 47);
@@ -229,12 +245,12 @@ namespace PersonalProject
             studentList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             studentList.Columns.AddRange(new DataGridViewColumn[] { ListOrder, studentID, studentName, studentDepartment, studentScore, TrainingPoint });
             studentList.Dock = DockStyle.Fill;
-            studentList.Location = new Point(0, 91);
+            studentList.Location = new Point(0, 93);
             studentList.Margin = new Padding(6);
             studentList.Name = "studentList";
             studentList.RowHeadersWidth = 82;
             studentList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            studentList.Size = new Size(1397, 777);
+            studentList.Size = new Size(1397, 775);
             studentList.TabIndex = 2;
             // 
             // ListOrder
@@ -295,6 +311,7 @@ namespace PersonalProject
             MainMenuStrip = menuStrip1;
             Margin = new Padding(4, 2, 4, 2);
             Name = "MainPage";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Quản Lý Sinh Viên";
             FormClosed += FormClosed_Click;
             menuStrip1.ResumeLayout(false);
@@ -335,5 +352,7 @@ namespace PersonalProject
         private ToolStripSeparator toolStripSeparator3;
         private ToolStripButton ImportButton;
         private ToolStripButton ExportButton;
+        private ToolStripMenuItem nhậpFileExcelToolStripMenuItem;
+        private ToolStripMenuItem xuấtFileExcelToolStripMenuItem;
     }
 }
