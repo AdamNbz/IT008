@@ -185,7 +185,7 @@ namespace Quan_ly_san_the_thao
 
             string insertHoaDonQuery = @"INSERT INTO HOADON (MAHD, USERNAME, TRIGIA, NGTTOAN) VALUES (@MAHD, @USERNAME, @TRIGIA, @NGTTOAN)";
             string query = @"INSERT INTO CTHD (MAHD, MASANTT, NGHDHLUC, KHUNGGIO)
-                             VALUES (@MAHD, @MASANTT, @NGHDHLUC, @TTGTSANG, @TTGTTRUA, @TTGTTOI, @Slot)";
+                             VALUES (@MAHD, @MASANTT, @NGHDHLUC, @Slot)";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
