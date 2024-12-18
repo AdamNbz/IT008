@@ -77,8 +77,6 @@ namespace Quan_ly_san_the_thao
             {
                 MessageBox.Show($"Hãy đến thanh toán trực tiếp tại sân và trình ra mã hóa đơn:\n{mahd}", "Xác nhận", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
-                SportListForm sport = new SportListForm(userData["USERNAME"].ToString());
-                sport.Show();
             }
         }
 
