@@ -37,6 +37,8 @@
             this.lb_SignIn = new System.Windows.Forms.Label();
             this.llb_SignIn = new System.Windows.Forms.LinkLabel();
             this.lb_Login = new System.Windows.Forms.Label();
+            this.btn_Hide = new System.Windows.Forms.Button();
+            this.btn_Show = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lb_Username
@@ -143,11 +145,35 @@
             this.lb_Login.Text = "Đăng nhập tài khoản";
             this.lb_Login.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btn_Hide
+            // 
+            this.btn_Hide.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_Hide.Image = global::Quan_ly_san_the_thao.Properties.Resources.icons8_closed_eye_24;
+            this.btn_Hide.Location = new System.Drawing.Point(459, 133);
+            this.btn_Hide.Name = "btn_Hide";
+            this.btn_Hide.Size = new System.Drawing.Size(29, 24);
+            this.btn_Hide.TabIndex = 17;
+            this.btn_Hide.UseVisualStyleBackColor = true;
+            this.btn_Hide.Click += new System.EventHandler(this.btn_Hide_Click);
+            // 
+            // btn_Show
+            // 
+            this.btn_Show.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_Show.Image = global::Quan_ly_san_the_thao.Properties.Resources.icons8_eye_24;
+            this.btn_Show.Location = new System.Drawing.Point(459, 133);
+            this.btn_Show.Name = "btn_Show";
+            this.btn_Show.Size = new System.Drawing.Size(29, 24);
+            this.btn_Show.TabIndex = 16;
+            this.btn_Show.UseVisualStyleBackColor = true;
+            this.btn_Show.Click += new System.EventHandler(this.btn_Show_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.btn_Hide);
+            this.Controls.Add(this.btn_Show);
             this.Controls.Add(this.lb_Login);
             this.Controls.Add(this.llb_SignIn);
             this.Controls.Add(this.lb_SignIn);
@@ -178,5 +204,7 @@
         private System.Windows.Forms.Label lb_SignIn;
         private System.Windows.Forms.LinkLabel llb_SignIn;
         private System.Windows.Forms.Label lb_Login;
+        private System.Windows.Forms.Button btn_Show;
+        private System.Windows.Forms.Button btn_Hide;
     }
 }

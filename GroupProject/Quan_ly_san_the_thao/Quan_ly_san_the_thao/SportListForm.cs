@@ -111,5 +111,13 @@ namespace Quan_ly_san_the_thao
             timeselect.ShowDialog();
             this.Visible = true;
         }
+
+        private void tsmi_ChangePW_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            ChangePassword changepw = new ChangePassword(username);
+            changepw.ShowDialog();
+            this.Visible = true;
+        }
     }
 }

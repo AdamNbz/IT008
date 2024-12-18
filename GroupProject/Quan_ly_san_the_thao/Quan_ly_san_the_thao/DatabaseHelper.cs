@@ -37,25 +37,6 @@ namespace Quan_ly_san_the_thao
                 return null;
             }
         }
-        public DataRow GetUsernameAndPwdByPhoneNumber(string phoneNumber)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                string query = "SELECT USERNAME, PASSWRD FROM KHACHHANG WHERE SDT = @PhoneNumber";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
-
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                DataTable dataTable = new DataTable();
-
-                connection.Open();
-                adapter.Fill(dataTable);
-
-                if (dataTable.Rows.Count > 0)
-                    return dataTable.Rows[0];
-                return null;
-            }
-        }
 
         public DataRow GetUserDetails(string username)
         {
@@ -64,25 +45,6 @@ namespace Quan_ly_san_the_thao
                 string query = "SELECT * FROM KHACHHANG WHERE Username = @Username";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Username", username);
-
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                DataTable dataTable = new DataTable();
-
-                connection.Open();
-                adapter.Fill(dataTable);
-
-                if (dataTable.Rows.Count > 0)
-                    return dataTable.Rows[0];
-                return null;
-            }
-        }
-        public DataRow GetUserDetailsByPhoneNumber(string phoneNumber)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                string query = "SELECT * FROM KHACHHANG WHERE SDT = @PhoneNumber";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
 
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 DataTable dataTable = new DataTable();
@@ -109,32 +71,6 @@ namespace Quan_ly_san_the_thao
                 int count = (int)command.ExecuteScalar(); 
 
                 return count > 0;
-            }
-        }
-
-        public bool UpdateCustomerInfo(string fullname, string phoneNumber, bool gender, string email, string username)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                string query = @"UPDATE KHACHHANG
-                                 SET TENKH = @FullName, 
-                                     SDT = @PhoneNumber, 
-                                     GTINH = @Gender, 
-                                     EMAIL = @Email
-                                 WHERE USERNAME = @Username";
-
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@FullName", fullname);
-                command.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
-                //bool bitGender;
-                command.Parameters.AddWithValue("@Gender", gender);
-                command.Parameters.AddWithValue("@Email", email);
-                command.Parameters.AddWithValue("@Username", username);
-
-                connection.Open();
-                int rowsAffected = command.ExecuteNonQuery();
-
-                return rowsAffected > 0;
             }
         }
 
@@ -185,8 +121,8 @@ namespace Quan_ly_san_the_thao
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
                 connection.Open();
-                int count = (int)command.ExecuteScalar(); // Return the count of matching records
-                return count > 0; // Return true if at least one match is found
+                int count = (int)command.ExecuteScalar();
+                return count > 0;
             }
         }
 
@@ -202,7 +138,7 @@ namespace Quan_ly_san_the_thao
                 command.Parameters.AddWithValue("@Username", username);
                 connection.Open();
                 int rowsAffected = command.ExecuteNonQuery();
-                return rowsAffected > 0; // Return true if the update was successful
+                return rowsAffected > 0;
             }
         }
     }
