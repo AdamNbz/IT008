@@ -13,11 +13,6 @@ namespace Quan_ly_san_the_thao
     {
         private string connectionString = @"Data Source=.\MSSQLSERVER01;Initial Catalog=IT8_DATABASE_PROJECT;Integrated Security=True";
 
-        /// <summary>
-        /// <para>Get the username and password of a user</para>
-        /// </summary>
-        /// <param name="username">string, username</param>
-        /// <returns>DataRow, gồm 2 trường là USERNAME và PSSWRD</returns>
         public DataRow GetUsernameAndPwd(string username)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -113,6 +108,7 @@ namespace Quan_ly_san_the_thao
                 }
             }
         }
+        
         public bool CheckPhoneNumberExists(string phoneNumber)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))

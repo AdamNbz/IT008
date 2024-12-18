@@ -119,5 +119,13 @@ namespace Quan_ly_san_the_thao
             changepw.ShowDialog();
             this.Visible = true;
         }
+
+        private void tsmi_PersonalInfo_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Profile pf = new Profile(userDetail);
+            pf.ShowDialog();
+            this.Visible = true;
+        }
     }
 }

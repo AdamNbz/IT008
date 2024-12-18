@@ -212,6 +212,11 @@ namespace Quan_ly_san_the_thao
             this.Close();
         }
 
+        private void Tsmi_ChangeSport_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void TimeSelection_Shown(object sender, EventArgs e)
         {
             string sportShowing = currentSport;
