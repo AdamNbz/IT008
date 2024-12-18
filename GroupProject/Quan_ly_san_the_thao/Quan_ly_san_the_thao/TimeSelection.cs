@@ -182,26 +182,9 @@ namespace Quan_ly_san_the_thao
         private void btn_Verify_Click(object sender, EventArgs e)
         {
             string ID = Guid.NewGuid().ToString().Substring(0, 10).ToUpper();
-            byte[] morningSlots = new byte[4];
-            byte[] afternoonSlots = new byte[4];
-            byte[] eveningSlots = new byte[4];
-
-            int i = selectedSlot;
-            if (selectedSlot >= 7 && selectedSlot <= 10)
-            {
-                morningSlots[i - 7] = 1;
-            }
-            else if (selectedSlot >= 13 && selectedSlot <= 16)
-            {
-                afternoonSlots[i - 13] = 1;
-            }
-            else
-            {
-                eveningSlots[i - 18] = 1;
-            }
 
             string insertHoaDonQuery = @"INSERT INTO HOADON (MAHD, USERNAME, TRIGIA, NGTTOAN) VALUES (@MAHD, @USERNAME, @TRIGIA, @NGTTOAN)";
-            string query = @"INSERT INTO CTHD (MAHD, MASANTT, NGHDHLUC, TTGTSANG, TTGTTRUA, TTGTTOI, KHUNGGIO)
+            string query = @"INSERT INTO CTHD (MAHD, MASANTT, NGHDHLUC, KHUNGGIO)
                              VALUES (@MAHD, @MASANTT, @NGHDHLUC, @TTGTSANG, @TTGTTRUA, @TTGTTOI, @Slot)";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -219,9 +202,6 @@ namespace Quan_ly_san_the_thao
                     command.Parameters.AddWithValue("@MAHD", ID);
                     command.Parameters.AddWithValue("@MASANTT", sportID);
                     command.Parameters.AddWithValue("@NGHDHLUC", selectedDay);
-                    command.Parameters.AddWithValue("@TTGTSANG", morningSlots);
-                    command.Parameters.AddWithValue("@TTGTTRUA", afternoonSlots);
-                    command.Parameters.AddWithValue("@TTGTTOI", eveningSlots);
                     command.Parameters.AddWithValue("@Slot", selectedSlot);
                     command.ExecuteNonQuery();
                 }
