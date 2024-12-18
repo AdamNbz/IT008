@@ -63,7 +63,7 @@
             this.tsmi_ChangePW,
             this.tsmi_LogOut});
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(135, 36);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(135, 38);
             this.thoátToolStripMenuItem.Text = "Tài khoản";
             // 
             // tsmi_PersonalInfo
@@ -118,6 +118,7 @@
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.button1.Location = new System.Drawing.Point(18, 452);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
@@ -130,6 +131,7 @@
             // 
             // button2
             // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.button2.Location = new System.Drawing.Point(326, 452);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
@@ -142,6 +144,7 @@
             // 
             // button4
             // 
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.button4.Location = new System.Drawing.Point(920, 452);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
@@ -154,6 +157,7 @@
             // 
             // button3
             // 
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(622, 452);
             this.button3.Margin = new System.Windows.Forms.Padding(4);

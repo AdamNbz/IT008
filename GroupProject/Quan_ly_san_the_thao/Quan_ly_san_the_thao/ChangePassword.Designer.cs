@@ -55,7 +55,7 @@
             // 
             this.tb_NewPw.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_NewPw.Location = new System.Drawing.Point(540, 260);
-            this.tb_NewPw.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_NewPw.Margin = new System.Windows.Forms.Padding(4);
             this.tb_NewPw.Name = "tb_NewPw";
             this.tb_NewPw.Size = new System.Drawing.Size(446, 41);
             this.tb_NewPw.TabIndex = 20;
@@ -64,7 +64,7 @@
             // 
             this.tb_CurentPw.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_CurentPw.Location = new System.Drawing.Point(540, 181);
-            this.tb_CurentPw.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_CurentPw.Margin = new System.Windows.Forms.Padding(4);
             this.tb_CurentPw.Name = "tb_CurentPw";
             this.tb_CurentPw.Size = new System.Drawing.Size(446, 41);
             this.tb_CurentPw.TabIndex = 19;
@@ -106,16 +106,17 @@
             // 
             this.tb_NewPwConfirm.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_NewPwConfirm.Location = new System.Drawing.Point(540, 338);
-            this.tb_NewPwConfirm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_NewPwConfirm.Margin = new System.Windows.Forms.Padding(4);
             this.tb_NewPwConfirm.Name = "tb_NewPwConfirm";
             this.tb_NewPwConfirm.Size = new System.Drawing.Size(446, 41);
             this.tb_NewPwConfirm.TabIndex = 22;
             // 
             // btn_ChangePw
             // 
+            this.btn_ChangePw.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_ChangePw.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ChangePw.Location = new System.Drawing.Point(348, 444);
-            this.btn_ChangePw.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_ChangePw.Margin = new System.Windows.Forms.Padding(4);
             this.btn_ChangePw.Name = "btn_ChangePw";
             this.btn_ChangePw.Size = new System.Drawing.Size(486, 77);
             this.btn_ChangePw.TabIndex = 23;
@@ -126,9 +127,10 @@
             // btn_Back
             // 
             this.btn_Back.BackColor = System.Drawing.Color.Tomato;
+            this.btn_Back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Back.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Back.Location = new System.Drawing.Point(348, 529);
-            this.btn_Back.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Back.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Back.Name = "btn_Back";
             this.btn_Back.Size = new System.Drawing.Size(486, 60);
             this.btn_Back.TabIndex = 24;
@@ -150,7 +152,7 @@
             this.Controls.Add(this.lb_NewPw);
             this.Controls.Add(this.lb_CurentPw);
             this.Controls.Add(this.lb_CreateNewPw);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "ChangePassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

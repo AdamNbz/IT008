@@ -39,13 +39,14 @@
             this.lb_Login = new System.Windows.Forms.Label();
             this.btn_Hide = new System.Windows.Forms.Button();
             this.btn_Show = new System.Windows.Forms.Button();
+            this.lb_Copyright = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lb_Username
             // 
             this.lb_Username.AutoSize = true;
             this.lb_Username.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Username.Location = new System.Drawing.Point(246, 190);
+            this.lb_Username.Location = new System.Drawing.Point(244, 182);
             this.lb_Username.Margin = new System.Windows.Forms.Padding(0, 23, 0, 23);
             this.lb_Username.Name = "lb_Username";
             this.lb_Username.Size = new System.Drawing.Size(239, 34);
@@ -56,7 +57,7 @@
             // 
             this.lb_Password.AutoSize = true;
             this.lb_Password.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Password.Location = new System.Drawing.Point(320, 269);
+            this.lb_Password.Location = new System.Drawing.Point(323, 259);
             this.lb_Password.Margin = new System.Windows.Forms.Padding(0, 23, 0, 23);
             this.lb_Password.Name = "lb_Password";
             this.lb_Password.Size = new System.Drawing.Size(160, 34);
@@ -98,7 +99,7 @@
             // 
             this.llb_ForgotPassword.AutoSize = true;
             this.llb_ForgotPassword.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llb_ForgotPassword.Location = new System.Drawing.Point(754, 350);
+            this.llb_ForgotPassword.Location = new System.Drawing.Point(763, 304);
             this.llb_ForgotPassword.Margin = new System.Windows.Forms.Padding(4, 23, 4, 23);
             this.llb_ForgotPassword.Name = "llb_ForgotPassword";
             this.llb_ForgotPassword.Size = new System.Drawing.Size(209, 29);
@@ -169,11 +170,23 @@
             this.btn_Show.UseVisualStyleBackColor = true;
             this.btn_Show.Click += new System.EventHandler(this.btn_Show_Click);
             // 
+            // lb_Copyright
+            // 
+            this.lb_Copyright.AutoSize = true;
+            this.lb_Copyright.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Copyright.Location = new System.Drawing.Point(883, 665);
+            this.lb_Copyright.Name = "lb_Copyright";
+            this.lb_Copyright.Size = new System.Drawing.Size(305, 30);
+            this.lb_Copyright.TabIndex = 18;
+            this.lb_Copyright.Text = "© 2024 - NHÓM 14 / IT008.P11";
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1200, 704);
+            this.Controls.Add(this.lb_Copyright);
             this.Controls.Add(this.btn_Hide);
             this.Controls.Add(this.btn_Show);
             this.Controls.Add(this.lb_Login);
@@ -209,5 +222,6 @@
         private System.Windows.Forms.Label lb_Login;
         private System.Windows.Forms.Button btn_Show;
         private System.Windows.Forms.Button btn_Hide;
+        private System.Windows.Forms.Label lb_Copyright;
     }
 }

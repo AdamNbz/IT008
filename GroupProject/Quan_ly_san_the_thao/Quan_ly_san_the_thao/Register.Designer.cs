@@ -180,6 +180,7 @@
             // 
             this.btn_Register.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_Register.BackColor = System.Drawing.Color.Lime;
+            this.btn_Register.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Register.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Register.Location = new System.Drawing.Point(506, 680);
             this.btn_Register.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -194,6 +195,7 @@
             // 
             this.btn_Exit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_Exit.BackColor = System.Drawing.Color.Tomato;
+            this.btn_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Exit.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Exit.Location = new System.Drawing.Point(248, 680);
             this.btn_Exit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

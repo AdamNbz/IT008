@@ -51,7 +51,7 @@
             // 
             this.lb_PaymentInfo.BackColor = System.Drawing.Color.Transparent;
             this.lb_PaymentInfo.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_PaymentInfo.Location = new System.Drawing.Point(305, 125);
+            this.lb_PaymentInfo.Location = new System.Drawing.Point(325, 125);
             this.lb_PaymentInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_PaymentInfo.Name = "lb_PaymentInfo";
             this.lb_PaymentInfo.Size = new System.Drawing.Size(518, 54);
@@ -161,9 +161,10 @@
             // lb_ThanhTien
             // 
             this.lb_ThanhTien.BackColor = System.Drawing.Color.Cornsilk;
+            this.lb_ThanhTien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lb_ThanhTien.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_ThanhTien.ForeColor = System.Drawing.Color.Gray;
-            this.lb_ThanhTien.Location = new System.Drawing.Point(205, 571);
+            this.lb_ThanhTien.Location = new System.Drawing.Point(245, 575);
             this.lb_ThanhTien.Margin = new System.Windows.Forms.Padding(0, 23, 0, 23);
             this.lb_ThanhTien.Name = "lb_ThanhTien";
             this.lb_ThanhTien.Size = new System.Drawing.Size(272, 46);
@@ -174,9 +175,10 @@
             // lb_Total
             // 
             this.lb_Total.BackColor = System.Drawing.Color.Cornsilk;
+            this.lb_Total.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lb_Total.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Total.ForeColor = System.Drawing.Color.Black;
-            this.lb_Total.Location = new System.Drawing.Point(477, 571);
+            this.lb_Total.Location = new System.Drawing.Point(517, 575);
             this.lb_Total.Margin = new System.Windows.Forms.Padding(0, 23, 0, 23);
             this.lb_Total.Name = "lb_Total";
             this.lb_Total.Size = new System.Drawing.Size(474, 46);
@@ -187,9 +189,10 @@
             // btn_Pay
             // 
             this.btn_Pay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btn_Pay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Pay.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Pay.Location = new System.Drawing.Point(222, 677);
-            this.btn_Pay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Pay.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Pay.Name = "btn_Pay";
             this.btn_Pay.Size = new System.Drawing.Size(352, 60);
             this.btn_Pay.TabIndex = 35;
@@ -200,9 +203,10 @@
             // btn_decline
             // 
             this.btn_decline.BackColor = System.Drawing.Color.Red;
+            this.btn_decline.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_decline.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_decline.Location = new System.Drawing.Point(582, 677);
-            this.btn_decline.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_decline.Margin = new System.Windows.Forms.Padding(4);
             this.btn_decline.Name = "btn_decline";
             this.btn_decline.Size = new System.Drawing.Size(352, 60);
             this.btn_decline.TabIndex = 36;
@@ -224,9 +228,9 @@
             this.gB_Info.Controls.Add(this.lb_NgayDat);
             this.gB_Info.Controls.Add(this.lb_ReserveDate);
             this.gB_Info.Location = new System.Drawing.Point(24, 185);
-            this.gB_Info.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gB_Info.Margin = new System.Windows.Forms.Padding(6);
             this.gB_Info.Name = "gB_Info";
-            this.gB_Info.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gB_Info.Padding = new System.Windows.Forms.Padding(6);
             this.gB_Info.Size = new System.Drawing.Size(1152, 390);
             this.gB_Info.TabIndex = 37;
             this.gB_Info.TabStop = false;
@@ -269,7 +273,7 @@
             this.Controls.Add(this.lb_ThanhTien);
             this.Controls.Add(this.lb_PaymentInfo);
             this.Controls.Add(this.gB_Info);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Payment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thanh toán";

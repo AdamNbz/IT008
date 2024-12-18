@@ -545,6 +545,7 @@
             // btn_Verify
             // 
             this.btn_Verify.BackColor = System.Drawing.Color.Lime;
+            this.btn_Verify.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Verify.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Verify.Location = new System.Drawing.Point(52, 669);
             this.btn_Verify.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
@@ -696,7 +697,7 @@
             // 
             this.tsmi_ChangeSport.BackColor = System.Drawing.Color.LightGray;
             this.tsmi_ChangeSport.Name = "tsmi_ChangeSport";
-            this.tsmi_ChangeSport.Size = new System.Drawing.Size(359, 44);
+            this.tsmi_ChangeSport.Size = new System.Drawing.Size(337, 44);
             this.tsmi_ChangeSport.Text = "Đổi môn thể thao";
             this.tsmi_ChangeSport.Click += new System.EventHandler(this.Tsmi_ChangeSport_Click);
             // 

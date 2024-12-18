@@ -199,6 +199,7 @@
             // btn_Return
             // 
             this.btn_Return.BackColor = System.Drawing.Color.LimeGreen;
+            this.btn_Return.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Return.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Return.Location = new System.Drawing.Point(462, 665);
             this.btn_Return.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -251,6 +252,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1200, 764);
             this.Controls.Add(this.lb_Amount);
             this.Controls.Add(this.btn_Return);
