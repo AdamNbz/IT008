@@ -72,5 +72,10 @@ namespace Quan_ly_san_the_thao
             tb_Password.UseSystemPasswordChar = false;
             btn_Show.BringToFront();
         }
+
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

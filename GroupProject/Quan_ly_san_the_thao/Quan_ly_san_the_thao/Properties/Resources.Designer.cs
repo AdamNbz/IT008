@@ -63,6 +63,16 @@ namespace Quan_ly_san_the_thao.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _63769 {
+            get {
+                object obj = ResourceManager.GetObject("63769", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _7402289 {
             get {
                 object obj = ResourceManager.GetObject("7402289", resourceCulture);
