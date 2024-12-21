@@ -63,13 +63,13 @@ namespace Quan_ly_san_the_thao
 
         private void btn_Show_Click(object sender, EventArgs e)
         {
-            tb_Password.UseSystemPasswordChar = true;
+            tb_Password.UseSystemPasswordChar = false;
             btn_Hide.BringToFront();
         }
 
         private void btn_Hide_Click(object sender, EventArgs e)
         {
-            tb_Password.UseSystemPasswordChar = false;
+            tb_Password.UseSystemPasswordChar = true;
             btn_Show.BringToFront();
         }
 

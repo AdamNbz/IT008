@@ -57,10 +57,10 @@
             this.lb_Username.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_Username.AutoSize = true;
             this.lb_Username.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Username.Location = new System.Drawing.Point(120, 208);
-            this.lb_Username.Margin = new System.Windows.Forms.Padding(0, 23, 0, 23);
+            this.lb_Username.Location = new System.Drawing.Point(58, 104);
+            this.lb_Username.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
             this.lb_Username.Name = "lb_Username";
-            this.lb_Username.Size = new System.Drawing.Size(239, 34);
+            this.lb_Username.Size = new System.Drawing.Size(120, 17);
             this.lb_Username.TabIndex = 0;
             this.lb_Username.Text = "Tên đăng nhập:";
             // 
@@ -69,10 +69,10 @@
             this.lb_Fullname.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_Fullname.AutoSize = true;
             this.lb_Fullname.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Fullname.Location = new System.Drawing.Point(228, 130);
-            this.lb_Fullname.Margin = new System.Windows.Forms.Padding(0, 23, 0, 23);
+            this.lb_Fullname.Location = new System.Drawing.Point(117, 64);
+            this.lb_Fullname.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
             this.lb_Fullname.Name = "lb_Fullname";
-            this.lb_Fullname.Size = new System.Drawing.Size(122, 34);
+            this.lb_Fullname.Size = new System.Drawing.Size(61, 17);
             this.lb_Fullname.TabIndex = 1;
             this.lb_Fullname.Text = "Họ tên:";
             // 
@@ -81,10 +81,10 @@
             this.lb_PhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_PhoneNumber.AutoSize = true;
             this.lb_PhoneNumber.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_PhoneNumber.Location = new System.Drawing.Point(142, 286);
-            this.lb_PhoneNumber.Margin = new System.Windows.Forms.Padding(0, 23, 0, 23);
+            this.lb_PhoneNumber.Location = new System.Drawing.Point(71, 145);
+            this.lb_PhoneNumber.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
             this.lb_PhoneNumber.Name = "lb_PhoneNumber";
-            this.lb_PhoneNumber.Size = new System.Drawing.Size(217, 34);
+            this.lb_PhoneNumber.Size = new System.Drawing.Size(107, 17);
             this.lb_PhoneNumber.TabIndex = 2;
             this.lb_PhoneNumber.Text = "Số điện thoại:";
             // 
@@ -93,10 +93,10 @@
             this.lb_Password.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_Password.AutoSize = true;
             this.lb_Password.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Password.Location = new System.Drawing.Point(195, 520);
-            this.lb_Password.Margin = new System.Windows.Forms.Padding(0, 23, 0, 23);
+            this.lb_Password.Location = new System.Drawing.Point(100, 266);
+            this.lb_Password.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
             this.lb_Password.Name = "lb_Password";
-            this.lb_Password.Size = new System.Drawing.Size(160, 34);
+            this.lb_Password.Size = new System.Drawing.Size(78, 17);
             this.lb_Password.TabIndex = 3;
             this.lb_Password.Text = "Mật khẩu:";
             // 
@@ -105,10 +105,10 @@
             this.lb_PasswordConfirm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_PasswordConfirm.AutoSize = true;
             this.lb_PasswordConfirm.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_PasswordConfirm.Location = new System.Drawing.Point(74, 598);
-            this.lb_PasswordConfirm.Margin = new System.Windows.Forms.Padding(0, 23, 0, 23);
+            this.lb_PasswordConfirm.Location = new System.Drawing.Point(34, 307);
+            this.lb_PasswordConfirm.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
             this.lb_PasswordConfirm.Name = "lb_PasswordConfirm";
-            this.lb_PasswordConfirm.Size = new System.Drawing.Size(291, 34);
+            this.lb_PasswordConfirm.Size = new System.Drawing.Size(144, 17);
             this.lb_PasswordConfirm.TabIndex = 4;
             this.lb_PasswordConfirm.Text = "Xác thật mật khẩu:";
             // 
@@ -117,10 +117,10 @@
             this.tb_Fullname.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tb_Fullname.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Fullname.ForeColor = System.Drawing.Color.LightGray;
-            this.tb_Fullname.Location = new System.Drawing.Point(400, 117);
-            this.tb_Fullname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_Fullname.Location = new System.Drawing.Point(200, 61);
+            this.tb_Fullname.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tb_Fullname.Name = "tb_Fullname";
-            this.tb_Fullname.Size = new System.Drawing.Size(446, 41);
+            this.tb_Fullname.Size = new System.Drawing.Size(225, 24);
             this.tb_Fullname.TabIndex = 5;
             this.tb_Fullname.Text = "VD: Nguyễn Văn A";
             this.tb_Fullname.Enter += new System.EventHandler(this.FullName_Enter);
@@ -131,10 +131,10 @@
             this.tb_Username.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tb_Username.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Username.ForeColor = System.Drawing.Color.LightGray;
-            this.tb_Username.Location = new System.Drawing.Point(400, 195);
-            this.tb_Username.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_Username.Location = new System.Drawing.Point(200, 101);
+            this.tb_Username.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tb_Username.Name = "tb_Username";
-            this.tb_Username.Size = new System.Drawing.Size(446, 41);
+            this.tb_Username.Size = new System.Drawing.Size(225, 24);
             this.tb_Username.TabIndex = 6;
             this.tb_Username.Text = "VD: UITTop1VN";
             this.tb_Username.Enter += new System.EventHandler(this.Username_Enter);
@@ -145,10 +145,10 @@
             this.tb_PhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tb_PhoneNumber.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_PhoneNumber.ForeColor = System.Drawing.Color.LightGray;
-            this.tb_PhoneNumber.Location = new System.Drawing.Point(400, 273);
-            this.tb_PhoneNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_PhoneNumber.Location = new System.Drawing.Point(200, 142);
+            this.tb_PhoneNumber.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tb_PhoneNumber.Name = "tb_PhoneNumber";
-            this.tb_PhoneNumber.Size = new System.Drawing.Size(446, 41);
+            this.tb_PhoneNumber.Size = new System.Drawing.Size(225, 24);
             this.tb_PhoneNumber.TabIndex = 7;
             this.tb_PhoneNumber.Text = "VD: 0123456789";
             this.tb_PhoneNumber.Enter += new System.EventHandler(this.PhoneNumber_Enter);
@@ -158,10 +158,10 @@
             // 
             this.tb_Password.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tb_Password.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Password.Location = new System.Drawing.Point(400, 508);
-            this.tb_Password.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_Password.Location = new System.Drawing.Point(200, 263);
+            this.tb_Password.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tb_Password.Name = "tb_Password";
-            this.tb_Password.Size = new System.Drawing.Size(446, 41);
+            this.tb_Password.Size = new System.Drawing.Size(225, 24);
             this.tb_Password.TabIndex = 8;
             this.tb_Password.UseSystemPasswordChar = true;
             // 
@@ -169,10 +169,10 @@
             // 
             this.tb_PasswordConfirm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tb_PasswordConfirm.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_PasswordConfirm.Location = new System.Drawing.Point(400, 586);
-            this.tb_PasswordConfirm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_PasswordConfirm.Location = new System.Drawing.Point(200, 304);
+            this.tb_PasswordConfirm.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tb_PasswordConfirm.Name = "tb_PasswordConfirm";
-            this.tb_PasswordConfirm.Size = new System.Drawing.Size(446, 41);
+            this.tb_PasswordConfirm.Size = new System.Drawing.Size(225, 24);
             this.tb_PasswordConfirm.TabIndex = 9;
             this.tb_PasswordConfirm.UseSystemPasswordChar = true;
             // 
@@ -181,11 +181,12 @@
             this.btn_Register.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_Register.BackColor = System.Drawing.Color.Lime;
             this.btn_Register.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Register.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Register.Location = new System.Drawing.Point(506, 680);
-            this.btn_Register.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Register.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Register.Location = new System.Drawing.Point(144, 360);
+            this.btn_Register.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_Register.Name = "btn_Register";
-            this.btn_Register.Size = new System.Drawing.Size(165, 61);
+            this.btn_Register.Size = new System.Drawing.Size(181, 32);
             this.btn_Register.TabIndex = 10;
             this.btn_Register.Text = "Đăng ký";
             this.btn_Register.UseVisualStyleBackColor = false;
@@ -194,15 +195,18 @@
             // btn_Exit
             // 
             this.btn_Exit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Exit.BackColor = System.Drawing.Color.Tomato;
+            this.btn_Exit.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Exit.BackgroundImage = global::Quan_ly_san_the_thao.Properties.Resources.back_arrow;
+            this.btn_Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Exit.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Exit.Location = new System.Drawing.Point(248, 680);
-            this.btn_Exit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Exit.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_Exit.Location = new System.Drawing.Point(11, 8);
+            this.btn_Exit.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_Exit.Name = "btn_Exit";
-            this.btn_Exit.Size = new System.Drawing.Size(165, 61);
+            this.btn_Exit.Size = new System.Drawing.Size(21, 21);
             this.btn_Exit.TabIndex = 11;
-            this.btn_Exit.Text = "Thoát";
             this.btn_Exit.UseVisualStyleBackColor = false;
             this.btn_Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
@@ -211,10 +215,10 @@
             this.lb_SignInOption.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_SignInOption.AutoSize = true;
             this.lb_SignInOption.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_SignInOption.Location = new System.Drawing.Point(280, 755);
-            this.lb_SignInOption.Margin = new System.Windows.Forms.Padding(0, 23, 0, 23);
+            this.lb_SignInOption.Location = new System.Drawing.Point(141, 404);
+            this.lb_SignInOption.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
             this.lb_SignInOption.Name = "lb_SignInOption";
-            this.lb_SignInOption.Size = new System.Drawing.Size(213, 29);
+            this.lb_SignInOption.Size = new System.Drawing.Size(112, 14);
             this.lb_SignInOption.TabIndex = 12;
             this.lb_SignInOption.Text = "Đã có tài khoản?";
             // 
@@ -223,10 +227,10 @@
             this.llb_Login.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.llb_Login.AutoSize = true;
             this.llb_Login.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llb_Login.Location = new System.Drawing.Point(484, 755);
-            this.llb_Login.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.llb_Login.Location = new System.Drawing.Point(249, 404);
+            this.llb_Login.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.llb_Login.Name = "llb_Login";
-            this.llb_Login.Size = new System.Drawing.Size(143, 29);
+            this.llb_Login.Size = new System.Drawing.Size(76, 14);
             this.llb_Login.TabIndex = 13;
             this.llb_Login.TabStop = true;
             this.llb_Login.Text = "Đăng nhập";
@@ -238,6 +242,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pn_Register.Controls.Add(this.tb_Email);
+            this.pn_Register.Controls.Add(this.btn_Exit);
             this.pn_Register.Controls.Add(this.lb_Email);
             this.pn_Register.Controls.Add(this.rdBtn_Female);
             this.pn_Register.Controls.Add(this.rdBtn_Male);
@@ -245,7 +250,6 @@
             this.pn_Register.Controls.Add(this.lb_Register);
             this.pn_Register.Controls.Add(this.llb_Login);
             this.pn_Register.Controls.Add(this.lb_SignInOption);
-            this.pn_Register.Controls.Add(this.btn_Exit);
             this.pn_Register.Controls.Add(this.btn_Register);
             this.pn_Register.Controls.Add(this.tb_PasswordConfirm);
             this.pn_Register.Controls.Add(this.tb_Password);
@@ -257,10 +261,10 @@
             this.pn_Register.Controls.Add(this.lb_PhoneNumber);
             this.pn_Register.Controls.Add(this.lb_Fullname);
             this.pn_Register.Controls.Add(this.lb_Username);
-            this.pn_Register.Location = new System.Drawing.Point(274, 61);
-            this.pn_Register.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pn_Register.Location = new System.Drawing.Point(125, 31);
+            this.pn_Register.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pn_Register.Name = "pn_Register";
-            this.pn_Register.Size = new System.Drawing.Size(920, 841);
+            this.pn_Register.Size = new System.Drawing.Size(460, 437);
             this.pn_Register.TabIndex = 14;
             // 
             // tb_Email
@@ -268,10 +272,10 @@
             this.tb_Email.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tb_Email.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Email.ForeColor = System.Drawing.Color.LightGray;
-            this.tb_Email.Location = new System.Drawing.Point(400, 430);
-            this.tb_Email.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_Email.Location = new System.Drawing.Point(200, 223);
+            this.tb_Email.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tb_Email.Name = "tb_Email";
-            this.tb_Email.Size = new System.Drawing.Size(446, 41);
+            this.tb_Email.Size = new System.Drawing.Size(225, 24);
             this.tb_Email.TabIndex = 20;
             this.tb_Email.Text = "VD: NguyenVanA@gmail.com";
             this.tb_Email.Enter += new System.EventHandler(this.Email_Enter);
@@ -282,10 +286,10 @@
             this.lb_Email.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_Email.AutoSize = true;
             this.lb_Email.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Email.Location = new System.Drawing.Point(242, 442);
-            this.lb_Email.Margin = new System.Windows.Forms.Padding(0, 23, 0, 23);
+            this.lb_Email.Location = new System.Drawing.Point(128, 226);
+            this.lb_Email.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
             this.lb_Email.Name = "lb_Email";
-            this.lb_Email.Size = new System.Drawing.Size(108, 34);
+            this.lb_Email.Size = new System.Drawing.Size(50, 17);
             this.lb_Email.TabIndex = 19;
             this.lb_Email.Text = "Email:";
             // 
@@ -293,11 +297,12 @@
             // 
             this.rdBtn_Female.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rdBtn_Female.AutoSize = true;
+            this.rdBtn_Female.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rdBtn_Female.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdBtn_Female.Location = new System.Drawing.Point(536, 361);
-            this.rdBtn_Female.Margin = new System.Windows.Forms.Padding(15, 5, 15, 5);
+            this.rdBtn_Female.Location = new System.Drawing.Point(268, 187);
+            this.rdBtn_Female.Margin = new System.Windows.Forms.Padding(8, 3, 8, 3);
             this.rdBtn_Female.Name = "rdBtn_Female";
-            this.rdBtn_Female.Size = new System.Drawing.Size(85, 38);
+            this.rdBtn_Female.Size = new System.Drawing.Size(46, 21);
             this.rdBtn_Female.TabIndex = 17;
             this.rdBtn_Female.TabStop = true;
             this.rdBtn_Female.Text = "Nữ";
@@ -307,11 +312,12 @@
             // 
             this.rdBtn_Male.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rdBtn_Male.AutoSize = true;
+            this.rdBtn_Male.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rdBtn_Male.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdBtn_Male.Location = new System.Drawing.Point(400, 361);
-            this.rdBtn_Male.Margin = new System.Windows.Forms.Padding(15, 5, 15, 5);
+            this.rdBtn_Male.Location = new System.Drawing.Point(200, 187);
+            this.rdBtn_Male.Margin = new System.Windows.Forms.Padding(8, 3, 8, 3);
             this.rdBtn_Male.Name = "rdBtn_Male";
-            this.rdBtn_Male.Size = new System.Drawing.Size(111, 38);
+            this.rdBtn_Male.Size = new System.Drawing.Size(57, 21);
             this.rdBtn_Male.TabIndex = 16;
             this.rdBtn_Male.TabStop = true;
             this.rdBtn_Male.Text = "Nam";
@@ -322,10 +328,10 @@
             this.lb_Gender.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_Gender.AutoSize = true;
             this.lb_Gender.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Gender.Location = new System.Drawing.Point(204, 364);
-            this.lb_Gender.Margin = new System.Windows.Forms.Padding(0, 23, 0, 23);
+            this.lb_Gender.Location = new System.Drawing.Point(106, 189);
+            this.lb_Gender.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
             this.lb_Gender.Name = "lb_Gender";
-            this.lb_Gender.Size = new System.Drawing.Size(151, 34);
+            this.lb_Gender.Size = new System.Drawing.Size(72, 17);
             this.lb_Gender.TabIndex = 15;
             this.lb_Gender.Text = "Giới tính:";
             // 
@@ -334,21 +340,22 @@
             this.lb_Register.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_Register.AutoSize = true;
             this.lb_Register.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Register.Location = new System.Drawing.Point(252, 38);
-            this.lb_Register.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_Register.Location = new System.Drawing.Point(112, 20);
+            this.lb_Register.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_Register.Name = "lb_Register";
-            this.lb_Register.Size = new System.Drawing.Size(470, 53);
+            this.lb_Register.Size = new System.Drawing.Size(239, 26);
             this.lb_Register.TabIndex = 14;
             this.lb_Register.Text = "Đăng ký tài khoản";
             // 
             // Register
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Quan_ly_san_the_thao.Properties.Resources.sports_tools__2_;
-            this.ClientSize = new System.Drawing.Size(1424, 961);
+            this.ClientSize = new System.Drawing.Size(712, 500);
             this.Controls.Add(this.pn_Register);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MaximizeBox = false;
             this.Name = "Register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -194,6 +194,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="README.txt" />
+    <None Include="Resources\back-arrow.png" />
+    <None Include="Resources\hide.png" />
+    <None Include="Resources\view.png" />
     <None Include="Resources\63769.png" />
     <None Include="Resources\soccer-manchester-united-f-c-logo-wallpaper-thumb.jpg" />
     <None Include="Resources\7402289.jpg" />
