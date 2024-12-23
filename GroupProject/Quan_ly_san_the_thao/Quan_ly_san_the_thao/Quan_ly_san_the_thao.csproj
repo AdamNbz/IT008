@@ -158,6 +158,9 @@
     <Compile Include="TimeSelection.Designer.cs">
       <DependentUpon>TimeSelection.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdministratorForm.resx">
+      <DependentUpon>AdministratorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
