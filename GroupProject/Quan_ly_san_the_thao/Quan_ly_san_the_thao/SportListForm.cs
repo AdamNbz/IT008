@@ -19,13 +19,14 @@ namespace Quan_ly_san_the_thao
         public SportListForm(string user)
         {
             InitializeComponent();
+            InitializeMenu();
             this.username = user;
             Console.OutputEncoding = Encoding.Unicode;
             Console.InputEncoding = Encoding.Unicode;
             userDetail = new DatabaseHelper().GetUserDetails(username);
             string[] parts = userDetail["TENKH"].ToString().Split(' ');
             string name = parts[parts.Length - 1];
-            lb_Greeting.Text = "CHÀO MỪNG " + name.ToUpper(new System.Globalization.CultureInfo("vi-VN")) 
+            lb_Greeting.Text = "CHÀO MỪNG " + name.ToUpper(new System.Globalization.CultureInfo("vi-VN"))
                                             + "\r\nĐẾN VỚI KHU PHỨC HỢP SE SPORT";
         }
 
@@ -63,14 +64,6 @@ namespace Quan_ly_san_the_thao
         {
             Label lb = (Label)sender;
             AdjustFontSize(lb);
-        }
-
-        private void tsmi_LogOut_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            LoginForm login = new LoginForm();
-            login.ShowDialog();
-            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -123,6 +116,63 @@ namespace Quan_ly_san_the_thao
             Profile pf = new Profile(userDetail);
             pf.ShowDialog();
             this.Visible = true;
+        }
+
+        private void InitializeMenu()
+        {
+            pn_settingSubmenu.Visible = false;
+        }
+
+        private void HideSubMenu()
+        {
+            if (pn_settingSubmenu.Visible == true)
+            {
+                pn_settingSubmenu.Visible = false;
+            }
+        }
+
+        private void ShowSubMenu(Panel sub)
+        {
+            if (sub.Visible == false)
+            {
+                HideSubMenu();
+                sub.Visible = true;
+            }
+            else
+            {
+                sub.Visible = false;
+            }
+        }
+
+        private void btn_Settings_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pn_settingSubmenu);
+        }
+
+        private void btn_Profile_Click(object sender, EventArgs e)
+        {
+
+            HideSubMenu();
+        }
+
+        private void btn_ChangePW_Click(object sender, EventArgs e)
+        {
+
+            HideSubMenu();
+        }
+
+        private void btn_Donate_Click(object sender, EventArgs e)
+        {
+
+            HideSubMenu();
+        }
+
+        private void btn_Logout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm login = new LoginForm();
+            login.ShowDialog();
+            this.Close();
         }
     }
 }
