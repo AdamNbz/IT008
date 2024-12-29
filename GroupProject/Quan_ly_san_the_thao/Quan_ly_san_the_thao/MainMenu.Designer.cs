@@ -43,8 +43,8 @@
             this.btn_Profile = new System.Windows.Forms.Button();
             this.btn_Settings = new System.Windows.Forms.Button();
             this.pn_ShortInfo = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lb_Balance = new System.Windows.Forms.Label();
+            this.lb_Hello = new System.Windows.Forms.Label();
             this.pn_Main.SuspendLayout();
             this.pn_settingSubmenu.SuspendLayout();
             this.pn_ShortInfo.SuspendLayout();
@@ -262,8 +262,8 @@
             // 
             // pn_ShortInfo
             // 
-            this.pn_ShortInfo.Controls.Add(this.label2);
-            this.pn_ShortInfo.Controls.Add(this.label1);
+            this.pn_ShortInfo.Controls.Add(this.lb_Balance);
+            this.pn_ShortInfo.Controls.Add(this.lb_Hello);
             this.pn_ShortInfo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pn_ShortInfo.Location = new System.Drawing.Point(0, 0);
             this.pn_ShortInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -271,25 +271,25 @@
             this.pn_ShortInfo.Size = new System.Drawing.Size(232, 123);
             this.pn_ShortInfo.TabIndex = 0;
             // 
-            // label2
+            // lb_Balance
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 38);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Số dư: xxx.xxx VND";
+            this.lb_Balance.AutoSize = true;
+            this.lb_Balance.Location = new System.Drawing.Point(4, 38);
+            this.lb_Balance.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_Balance.Name = "lb_Balance";
+            this.lb_Balance.Size = new System.Drawing.Size(119, 16);
+            this.lb_Balance.TabIndex = 1;
+            this.lb_Balance.Text = "Số dư: xxx.xxx VND";
             // 
-            // label1
+            // lb_Hello
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Xin chào, [Tên khách hàng]!";
+            this.lb_Hello.AutoSize = true;
+            this.lb_Hello.Location = new System.Drawing.Point(4, 11);
+            this.lb_Hello.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_Hello.Name = "lb_Hello";
+            this.lb_Hello.Size = new System.Drawing.Size(171, 16);
+            this.lb_Hello.TabIndex = 0;
+            this.lb_Hello.Text = "Xin chào, [Tên khách hàng]!";
             // 
             // SportListForm
             // 
@@ -334,7 +334,7 @@
         private System.Windows.Forms.Button btn_Profile;
         private System.Windows.Forms.Button btn_SelectField;
         private System.Windows.Forms.Button btn_Logout;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lb_Balance;
+        private System.Windows.Forms.Label lb_Hello;
     }
 }
