@@ -114,7 +114,19 @@
     <Compile Include="ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Coupon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coupon.Designer.cs">
+      <DependentUpon>Coupon.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseHelper.cs" />
+    <Compile Include="Deposit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Deposit.Designer.cs">
+      <DependentUpon>Deposit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,11 +158,11 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="SportListForm.cs">
+    <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SportListForm.Designer.cs">
-      <DependentUpon>SportListForm.cs</DependentUpon>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="TimeSelection.cs">
       <SubType>Form</SubType>
@@ -163,6 +175,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coupon.resx">
+      <DependentUpon>Coupon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Deposit.resx">
+      <DependentUpon>Deposit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -181,8 +199,8 @@
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SportListForm.resx">
-      <DependentUpon>SportListForm.cs</DependentUpon>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TimeSelection.resx">
       <DependentUpon>TimeSelection.cs</DependentUpon>
@@ -203,6 +221,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="README.txt" />
+    <Content Include="Resources\Deposit_QR.jpg" />
     <None Include="Resources\back-arrow.png" />
     <None Include="Resources\hide.png" />
     <None Include="Resources\view.png" />
