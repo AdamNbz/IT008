@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btn_Return = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_Coupon = new System.Windows.Forms.DataGridView();
             this.lb_CouponCode = new System.Windows.Forms.Label();
             this.lb_Type = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -44,7 +44,7 @@
             this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Publish = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Coupon)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Return
@@ -62,20 +62,20 @@
             this.btn_Return.UseVisualStyleBackColor = false;
             this.btn_Return.Click += new System.EventHandler(this.btn_Return_Click);
             // 
-            // dataGridView1
+            // dgv_Coupon
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_Coupon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Coupon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CouponCode,
             this.Type,
             this.Value,
             this.Publish});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 48);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 301);
-            this.dataGridView1.TabIndex = 3;
+            this.dgv_Coupon.Location = new System.Drawing.Point(12, 48);
+            this.dgv_Coupon.Name = "dgv_Coupon";
+            this.dgv_Coupon.RowHeadersWidth = 51;
+            this.dgv_Coupon.RowTemplate.Height = 24;
+            this.dgv_Coupon.Size = new System.Drawing.Size(776, 301);
+            this.dgv_Coupon.TabIndex = 3;
             // 
             // lb_CouponCode
             // 
@@ -227,12 +227,12 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lb_Type);
             this.Controls.Add(this.lb_CouponCode);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_Coupon);
             this.Controls.Add(this.btn_Return);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Coupon";
             this.Text = "Coupon";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Coupon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,7 +241,7 @@
         #endregion
 
         private System.Windows.Forms.Button btn_Return;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_Coupon;
         private System.Windows.Forms.Label lb_CouponCode;
         private System.Windows.Forms.Label lb_Type;
         private System.Windows.Forms.TextBox textBox1;
