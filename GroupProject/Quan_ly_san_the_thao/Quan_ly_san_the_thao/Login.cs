@@ -35,7 +35,7 @@ namespace Quan_ly_san_the_thao
 
                 Thread t = new Thread(() =>
                 {
-                    SportListForm sportListForm = new SportListForm(tb_Username.Text);
+                    MainMenu sportListForm = new MainMenu(tb_Username.Text);
                     Application.Run(sportListForm);
                 });
                 t.SetApartmentState(ApartmentState.STA);
