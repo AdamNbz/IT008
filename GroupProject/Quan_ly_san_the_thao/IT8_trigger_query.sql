@@ -1,7 +1,7 @@
 -- Các thông tin của một khách hàng không được phép trống, đúng định dạng (ví dụ email phải có @gmail.com, sdt luôn bắt đầu bằng số 0) và nằm trong giới hạn ký tự.
     CREATE TRIGGER TRIGGER_THONGTIN_KHACHHANG
     ON KHACHHANG
-    BEFORE 
+    AFTER 
         INSERT,
         UPDATE
     AS 

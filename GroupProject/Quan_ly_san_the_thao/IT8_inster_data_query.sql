@@ -115,5 +115,6 @@ INSERT INTO KHACHHANG VALUES
 	N'Nguyễn Võ Ngọc Bảo',
 	'contact.adamnguyen@gmail.com',
 	'0329501759',
+	0,
 	1
 )
