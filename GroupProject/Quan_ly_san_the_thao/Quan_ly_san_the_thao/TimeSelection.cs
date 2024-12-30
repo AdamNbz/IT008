@@ -217,6 +217,11 @@ namespace Quan_ly_san_the_thao
             this.Close();
         }
 
+        private void ColorizeSlotButtons(object sender, EventArgs e)
+        {
+
+        }
+
         private void TimeSelection_Shown(object sender, EventArgs e)
         {
             string sportShowing = currentSport;

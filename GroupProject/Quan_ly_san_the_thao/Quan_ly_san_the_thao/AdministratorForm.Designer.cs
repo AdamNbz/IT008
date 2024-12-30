@@ -36,6 +36,7 @@
             this.btn_Logout = new System.Windows.Forms.Button();
             this.btn_Profile = new System.Windows.Forms.Button();
             this.pn_ShortInfo = new System.Windows.Forms.Panel();
+            this.lb_Role = new System.Windows.Forms.Label();
             this.pn_Main = new System.Windows.Forms.Panel();
             this.lb_Greeting = new System.Windows.Forms.Label();
             btn_Bill = new System.Windows.Forms.Button();
@@ -44,6 +45,42 @@
             this.pn_ShortInfo.SuspendLayout();
             this.pn_Main.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // btn_Bill
+            // 
+            btn_Bill.Cursor = System.Windows.Forms.Cursors.Hand;
+            btn_Bill.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btn_Bill.Location = new System.Drawing.Point(924, 324);
+            btn_Bill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            btn_Bill.Name = "btn_Bill";
+            btn_Bill.Size = new System.Drawing.Size(175, 63);
+            btn_Bill.TabIndex = 13;
+            btn_Bill.Text = "Hóa đơn";
+            btn_Bill.UseVisualStyleBackColor = true;
+            // 
+            // btn_Customer
+            // 
+            btn_Customer.Cursor = System.Windows.Forms.Cursors.Hand;
+            btn_Customer.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            btn_Customer.Location = new System.Drawing.Point(726, 324);
+            btn_Customer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            btn_Customer.Name = "btn_Customer";
+            btn_Customer.Size = new System.Drawing.Size(175, 63);
+            btn_Customer.TabIndex = 12;
+            btn_Customer.Text = "Khách hàng";
+            btn_Customer.UseVisualStyleBackColor = true;
+            // 
+            // btn_Coupon
+            // 
+            btn_Coupon.Cursor = System.Windows.Forms.Cursors.Hand;
+            btn_Coupon.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            btn_Coupon.Location = new System.Drawing.Point(521, 324);
+            btn_Coupon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            btn_Coupon.Name = "btn_Coupon";
+            btn_Coupon.Size = new System.Drawing.Size(175, 63);
+            btn_Coupon.TabIndex = 11;
+            btn_Coupon.Text = "Mã giảm giá";
+            btn_Coupon.UseVisualStyleBackColor = true;
             // 
             // lb_Hello
             // 
@@ -82,42 +119,6 @@
             this.btn_Logout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Logout.UseVisualStyleBackColor = true;
             // 
-            // btn_Bill
-            // 
-            btn_Bill.Cursor = System.Windows.Forms.Cursors.Hand;
-            btn_Bill.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            btn_Bill.Location = new System.Drawing.Point(924, 324);
-            btn_Bill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            btn_Bill.Name = "btn_Bill";
-            btn_Bill.Size = new System.Drawing.Size(175, 63);
-            btn_Bill.TabIndex = 13;
-            btn_Bill.Text = "Hóa đơn";
-            btn_Bill.UseVisualStyleBackColor = true;
-            // 
-            // btn_Customer
-            // 
-            btn_Customer.Cursor = System.Windows.Forms.Cursors.Hand;
-            btn_Customer.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            btn_Customer.Location = new System.Drawing.Point(726, 324);
-            btn_Customer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            btn_Customer.Name = "btn_Customer";
-            btn_Customer.Size = new System.Drawing.Size(175, 63);
-            btn_Customer.TabIndex = 12;
-            btn_Customer.Text = "Khách hàng";
-            btn_Customer.UseVisualStyleBackColor = true;
-            // 
-            // btn_Coupon
-            // 
-            btn_Coupon.Cursor = System.Windows.Forms.Cursors.Hand;
-            btn_Coupon.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            btn_Coupon.Location = new System.Drawing.Point(521, 324);
-            btn_Coupon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            btn_Coupon.Name = "btn_Coupon";
-            btn_Coupon.Size = new System.Drawing.Size(175, 63);
-            btn_Coupon.TabIndex = 11;
-            btn_Coupon.Text = "Mã giảm giá";
-            btn_Coupon.UseVisualStyleBackColor = true;
-            // 
             // btn_Profile
             // 
             this.btn_Profile.Dock = System.Windows.Forms.DockStyle.Top;
@@ -137,6 +138,7 @@
             // 
             // pn_ShortInfo
             // 
+            this.pn_ShortInfo.Controls.Add(this.lb_Role);
             this.pn_ShortInfo.Controls.Add(this.lb_Balance);
             this.pn_ShortInfo.Controls.Add(this.lb_Hello);
             this.pn_ShortInfo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -145,6 +147,16 @@
             this.pn_ShortInfo.Name = "pn_ShortInfo";
             this.pn_ShortInfo.Size = new System.Drawing.Size(232, 123);
             this.pn_ShortInfo.TabIndex = 0;
+            // 
+            // lb_Role
+            // 
+            this.lb_Role.AutoSize = true;
+            this.lb_Role.Location = new System.Drawing.Point(4, 66);
+            this.lb_Role.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_Role.Name = "lb_Role";
+            this.lb_Role.Size = new System.Drawing.Size(95, 16);
+            this.lb_Role.TabIndex = 2;
+            this.lb_Role.Text = "Vai trò: [vai trò]";
             // 
             // pn_Main
             // 
@@ -181,8 +193,9 @@
             this.Controls.Add(this.pn_Main);
             this.Controls.Add(this.lb_Greeting);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdministratorForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrator";
             this.pn_ShortInfo.ResumeLayout(false);
             this.pn_ShortInfo.PerformLayout();
@@ -200,5 +213,6 @@
         private System.Windows.Forms.Panel pn_ShortInfo;
         private System.Windows.Forms.Panel pn_Main;
         private System.Windows.Forms.Label lb_Greeting;
+        private System.Windows.Forms.Label lb_Role;
     }
 }

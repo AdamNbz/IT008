@@ -45,6 +45,7 @@
             this.pn_ShortInfo = new System.Windows.Forms.Panel();
             this.lb_Balance = new System.Windows.Forms.Label();
             this.lb_Hello = new System.Windows.Forms.Label();
+            this.lb_Role = new System.Windows.Forms.Label();
             this.pn_Main.SuspendLayout();
             this.pn_settingSubmenu.SuspendLayout();
             this.pn_ShortInfo.SuspendLayout();
@@ -136,7 +137,7 @@
             this.pn_Main.Controls.Add(this.pn_ShortInfo);
             this.pn_Main.Dock = System.Windows.Forms.DockStyle.Left;
             this.pn_Main.Location = new System.Drawing.Point(0, 0);
-            this.pn_Main.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_Main.Margin = new System.Windows.Forms.Padding(4);
             this.pn_Main.Name = "pn_Main";
             this.pn_Main.Size = new System.Drawing.Size(232, 752);
             this.pn_Main.TabIndex = 8;
@@ -149,7 +150,7 @@
             this.btn_Logout.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Logout.ForeColor = System.Drawing.Color.SeaShell;
             this.btn_Logout.Location = new System.Drawing.Point(0, 434);
-            this.btn_Logout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Logout.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Logout.Name = "btn_Logout";
             this.btn_Logout.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.btn_Logout.Size = new System.Drawing.Size(232, 62);
@@ -167,7 +168,7 @@
             this.btn_SelectField.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_SelectField.ForeColor = System.Drawing.Color.SeaShell;
             this.btn_SelectField.Location = new System.Drawing.Point(0, 372);
-            this.btn_SelectField.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_SelectField.Margin = new System.Windows.Forms.Padding(4);
             this.btn_SelectField.Name = "btn_SelectField";
             this.btn_SelectField.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.btn_SelectField.Size = new System.Drawing.Size(232, 62);
@@ -183,7 +184,7 @@
             this.pn_settingSubmenu.Controls.Add(this.btn_Profile);
             this.pn_settingSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pn_settingSubmenu.Location = new System.Drawing.Point(0, 185);
-            this.pn_settingSubmenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_settingSubmenu.Margin = new System.Windows.Forms.Padding(4);
             this.pn_settingSubmenu.Name = "pn_settingSubmenu";
             this.pn_settingSubmenu.Size = new System.Drawing.Size(232, 187);
             this.pn_settingSubmenu.TabIndex = 1;
@@ -196,7 +197,7 @@
             this.btn_Donate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Donate.ForeColor = System.Drawing.Color.SeaShell;
             this.btn_Donate.Location = new System.Drawing.Point(0, 124);
-            this.btn_Donate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Donate.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Donate.Name = "btn_Donate";
             this.btn_Donate.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
             this.btn_Donate.Size = new System.Drawing.Size(232, 62);
@@ -214,7 +215,7 @@
             this.btn_ChangePW.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ChangePW.ForeColor = System.Drawing.Color.SeaShell;
             this.btn_ChangePW.Location = new System.Drawing.Point(0, 62);
-            this.btn_ChangePW.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_ChangePW.Margin = new System.Windows.Forms.Padding(4);
             this.btn_ChangePW.Name = "btn_ChangePW";
             this.btn_ChangePW.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
             this.btn_ChangePW.Size = new System.Drawing.Size(232, 62);
@@ -232,7 +233,7 @@
             this.btn_Profile.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Profile.ForeColor = System.Drawing.Color.SeaShell;
             this.btn_Profile.Location = new System.Drawing.Point(0, 0);
-            this.btn_Profile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Profile.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Profile.Name = "btn_Profile";
             this.btn_Profile.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
             this.btn_Profile.Size = new System.Drawing.Size(232, 62);
@@ -250,7 +251,7 @@
             this.btn_Settings.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Settings.ForeColor = System.Drawing.Color.SeaShell;
             this.btn_Settings.Location = new System.Drawing.Point(0, 123);
-            this.btn_Settings.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Settings.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Settings.Name = "btn_Settings";
             this.btn_Settings.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.btn_Settings.Size = new System.Drawing.Size(232, 62);
@@ -262,11 +263,12 @@
             // 
             // pn_ShortInfo
             // 
+            this.pn_ShortInfo.Controls.Add(this.lb_Role);
             this.pn_ShortInfo.Controls.Add(this.lb_Balance);
             this.pn_ShortInfo.Controls.Add(this.lb_Hello);
             this.pn_ShortInfo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pn_ShortInfo.Location = new System.Drawing.Point(0, 0);
-            this.pn_ShortInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_ShortInfo.Margin = new System.Windows.Forms.Padding(4);
             this.pn_ShortInfo.Name = "pn_ShortInfo";
             this.pn_ShortInfo.Size = new System.Drawing.Size(232, 123);
             this.pn_ShortInfo.TabIndex = 0;
@@ -290,6 +292,16 @@
             this.lb_Hello.Size = new System.Drawing.Size(171, 16);
             this.lb_Hello.TabIndex = 0;
             this.lb_Hello.Text = "Xin chào, [Tên khách hàng]!";
+            // 
+            // lb_Role
+            // 
+            this.lb_Role.AutoSize = true;
+            this.lb_Role.Location = new System.Drawing.Point(4, 66);
+            this.lb_Role.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_Role.Name = "lb_Role";
+            this.lb_Role.Size = new System.Drawing.Size(95, 16);
+            this.lb_Role.TabIndex = 2;
+            this.lb_Role.Text = "Vai trò: [vai trò]";
             // 
             // SportListForm
             // 
@@ -336,5 +348,6 @@
         private System.Windows.Forms.Button btn_Logout;
         private System.Windows.Forms.Label lb_Balance;
         private System.Windows.Forms.Label lb_Hello;
+        private System.Windows.Forms.Label lb_Role;
     }
 }

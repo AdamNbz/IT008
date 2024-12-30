@@ -173,6 +173,7 @@
             this.Controls.Add(this.btn_Return);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Deposit";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Deposit";
             ((System.ComponentModel.ISupportInitialize)(this.pb_QR)).EndInit();
             this.ResumeLayout(false);
