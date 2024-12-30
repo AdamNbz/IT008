@@ -35,9 +35,11 @@
             this.lb_7PM = new System.Windows.Forms.Label();
             this.lb_6PM = new System.Windows.Forms.Label();
             this.lb_4PM = new System.Windows.Forms.Label();
-            this.btn_7 = new System.Windows.Forms.Button();
+            this.btn_7_1 = new System.Windows.Forms.Button();
             this.lb_3PM = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lb_2PM = new System.Windows.Forms.Label();
@@ -45,17 +47,41 @@
             this.lb_1PM = new System.Windows.Forms.Label();
             this.lb_7AM = new System.Windows.Forms.Label();
             this.pn_Monday = new System.Windows.Forms.Panel();
-            this.btn_21 = new System.Windows.Forms.Button();
-            this.btn_20 = new System.Windows.Forms.Button();
-            this.btn_19 = new System.Windows.Forms.Button();
-            this.btn_18 = new System.Windows.Forms.Button();
-            this.btn_16 = new System.Windows.Forms.Button();
-            this.btn_15 = new System.Windows.Forms.Button();
-            this.btn_14 = new System.Windows.Forms.Button();
-            this.btn_13 = new System.Windows.Forms.Button();
-            this.btn_10 = new System.Windows.Forms.Button();
-            this.btn_9 = new System.Windows.Forms.Button();
-            this.btn_8 = new System.Windows.Forms.Button();
+            this.btn_21_3 = new System.Windows.Forms.Button();
+            this.btn_20_3 = new System.Windows.Forms.Button();
+            this.btn_19_3 = new System.Windows.Forms.Button();
+            this.btn_18_3 = new System.Windows.Forms.Button();
+            this.btn_16_3 = new System.Windows.Forms.Button();
+            this.btn_15_3 = new System.Windows.Forms.Button();
+            this.btn_14_3 = new System.Windows.Forms.Button();
+            this.btn_13_3 = new System.Windows.Forms.Button();
+            this.btn_10_3 = new System.Windows.Forms.Button();
+            this.btn_9_3 = new System.Windows.Forms.Button();
+            this.btn_8_3 = new System.Windows.Forms.Button();
+            this.btn_7_3 = new System.Windows.Forms.Button();
+            this.btn_21_2 = new System.Windows.Forms.Button();
+            this.btn_20_2 = new System.Windows.Forms.Button();
+            this.btn_19_2 = new System.Windows.Forms.Button();
+            this.btn_18_2 = new System.Windows.Forms.Button();
+            this.btn_16_2 = new System.Windows.Forms.Button();
+            this.btn_15_2 = new System.Windows.Forms.Button();
+            this.btn_14_2 = new System.Windows.Forms.Button();
+            this.btn_13_2 = new System.Windows.Forms.Button();
+            this.btn_10_2 = new System.Windows.Forms.Button();
+            this.btn_9_2 = new System.Windows.Forms.Button();
+            this.btn_8_2 = new System.Windows.Forms.Button();
+            this.btn_7_2 = new System.Windows.Forms.Button();
+            this.btn_21_1 = new System.Windows.Forms.Button();
+            this.btn_20_1 = new System.Windows.Forms.Button();
+            this.btn_19_1 = new System.Windows.Forms.Button();
+            this.btn_18_1 = new System.Windows.Forms.Button();
+            this.btn_16_1 = new System.Windows.Forms.Button();
+            this.btn_15_1 = new System.Windows.Forms.Button();
+            this.btn_14_1 = new System.Windows.Forms.Button();
+            this.btn_13_1 = new System.Windows.Forms.Button();
+            this.btn_10_1 = new System.Windows.Forms.Button();
+            this.btn_9_1 = new System.Windows.Forms.Button();
+            this.btn_8_1 = new System.Windows.Forms.Button();
             this.mCd_calendar = new System.Windows.Forms.MonthCalendar();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lb_TotalNeeded = new System.Windows.Forms.Label();
@@ -167,8 +193,9 @@
             this.lb_4PM.Text = "16g-17g";
             this.lb_4PM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btn_7
+            // btn_7_1
             // 
+<<<<<<< Updated upstream
             this.btn_7.BackColor = System.Drawing.Color.White;
             this.btn_7.Location = new System.Drawing.Point(2, 2);
             this.btn_7.Margin = new System.Windows.Forms.Padding(2);
@@ -177,6 +204,16 @@
             this.btn_7.TabIndex = 1;
             this.btn_7.UseVisualStyleBackColor = false;
             this.btn_7.Click += new System.EventHandler(this.ColorizeSlotButtons);
+=======
+            this.btn_7_1.BackColor = System.Drawing.Color.White;
+            this.btn_7_1.Location = new System.Drawing.Point(2, 2);
+            this.btn_7_1.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_7_1.Name = "btn_7_1";
+            this.btn_7_1.Size = new System.Drawing.Size(144, 36);
+            this.btn_7_1.TabIndex = 1;
+            this.btn_7_1.UseVisualStyleBackColor = false;
+            this.btn_7_1.Click += new System.EventHandler(this.ColorizeSlotButtons);
+>>>>>>> Stashed changes
             // 
             // lb_3PM
             // 
@@ -192,6 +229,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lb_9PM);
@@ -212,6 +251,28 @@
             this.panel1.Size = new System.Drawing.Size(563, 568);
             this.panel1.TabIndex = 19;
             // 
+            // label4
+            // 
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(418, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(144, 35);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Slot sân 3";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(247, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(144, 35);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Slot sân 2";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label2
             // 
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -219,9 +280,9 @@
             this.label2.Location = new System.Drawing.Point(73, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(488, 35);
+            this.label2.Size = new System.Drawing.Size(144, 35);
             this.label2.TabIndex = 22;
-            this.label2.Text = "Slot đặt sân";
+            this.label2.Text = "Slot sân 1";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
@@ -286,26 +347,51 @@
             // 
             // pn_Monday
             // 
-            this.pn_Monday.Controls.Add(this.btn_21);
-            this.pn_Monday.Controls.Add(this.btn_20);
-            this.pn_Monday.Controls.Add(this.btn_19);
-            this.pn_Monday.Controls.Add(this.btn_18);
-            this.pn_Monday.Controls.Add(this.btn_16);
-            this.pn_Monday.Controls.Add(this.btn_15);
-            this.pn_Monday.Controls.Add(this.btn_14);
-            this.pn_Monday.Controls.Add(this.btn_13);
-            this.pn_Monday.Controls.Add(this.btn_10);
-            this.pn_Monday.Controls.Add(this.btn_9);
-            this.pn_Monday.Controls.Add(this.btn_8);
-            this.pn_Monday.Controls.Add(this.btn_7);
+            this.pn_Monday.Controls.Add(this.btn_21_3);
+            this.pn_Monday.Controls.Add(this.btn_20_3);
+            this.pn_Monday.Controls.Add(this.btn_19_3);
+            this.pn_Monday.Controls.Add(this.btn_18_3);
+            this.pn_Monday.Controls.Add(this.btn_16_3);
+            this.pn_Monday.Controls.Add(this.btn_15_3);
+            this.pn_Monday.Controls.Add(this.btn_14_3);
+            this.pn_Monday.Controls.Add(this.btn_13_3);
+            this.pn_Monday.Controls.Add(this.btn_10_3);
+            this.pn_Monday.Controls.Add(this.btn_9_3);
+            this.pn_Monday.Controls.Add(this.btn_8_3);
+            this.pn_Monday.Controls.Add(this.btn_7_3);
+            this.pn_Monday.Controls.Add(this.btn_21_2);
+            this.pn_Monday.Controls.Add(this.btn_20_2);
+            this.pn_Monday.Controls.Add(this.btn_19_2);
+            this.pn_Monday.Controls.Add(this.btn_18_2);
+            this.pn_Monday.Controls.Add(this.btn_16_2);
+            this.pn_Monday.Controls.Add(this.btn_15_2);
+            this.pn_Monday.Controls.Add(this.btn_14_2);
+            this.pn_Monday.Controls.Add(this.btn_13_2);
+            this.pn_Monday.Controls.Add(this.btn_10_2);
+            this.pn_Monday.Controls.Add(this.btn_9_2);
+            this.pn_Monday.Controls.Add(this.btn_8_2);
+            this.pn_Monday.Controls.Add(this.btn_7_2);
+            this.pn_Monday.Controls.Add(this.btn_21_1);
+            this.pn_Monday.Controls.Add(this.btn_20_1);
+            this.pn_Monday.Controls.Add(this.btn_19_1);
+            this.pn_Monday.Controls.Add(this.btn_18_1);
+            this.pn_Monday.Controls.Add(this.btn_16_1);
+            this.pn_Monday.Controls.Add(this.btn_15_1);
+            this.pn_Monday.Controls.Add(this.btn_14_1);
+            this.pn_Monday.Controls.Add(this.btn_13_1);
+            this.pn_Monday.Controls.Add(this.btn_10_1);
+            this.pn_Monday.Controls.Add(this.btn_9_1);
+            this.pn_Monday.Controls.Add(this.btn_8_1);
+            this.pn_Monday.Controls.Add(this.btn_7_1);
             this.pn_Monday.Location = new System.Drawing.Point(332, 121);
             this.pn_Monday.Margin = new System.Windows.Forms.Padding(2);
             this.pn_Monday.Name = "pn_Monday";
             this.pn_Monday.Size = new System.Drawing.Size(492, 514);
             this.pn_Monday.TabIndex = 15;
             // 
-            // btn_21
+            // btn_21_3
             // 
+<<<<<<< Updated upstream
             this.btn_21.BackColor = System.Drawing.Color.White;
             this.btn_21.Location = new System.Drawing.Point(2, 472);
             this.btn_21.Margin = new System.Windows.Forms.Padding(2);
@@ -314,9 +400,20 @@
             this.btn_21.TabIndex = 23;
             this.btn_21.UseVisualStyleBackColor = false;
             this.btn_21.Click += new System.EventHandler(this.ColorizeSlotButtons);
+=======
+            this.btn_21_3.BackColor = System.Drawing.Color.White;
+            this.btn_21_3.Location = new System.Drawing.Point(346, 472);
+            this.btn_21_3.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_21_3.Name = "btn_21_3";
+            this.btn_21_3.Size = new System.Drawing.Size(144, 36);
+            this.btn_21_3.TabIndex = 47;
+            this.btn_21_3.UseVisualStyleBackColor = false;
+            this.btn_21_3.Click += new System.EventHandler(this.ColorizeSlotButtons);
+>>>>>>> Stashed changes
             // 
-            // btn_20
+            // btn_20_3
             // 
+<<<<<<< Updated upstream
             this.btn_20.BackColor = System.Drawing.Color.White;
             this.btn_20.Location = new System.Drawing.Point(2, 431);
             this.btn_20.Margin = new System.Windows.Forms.Padding(2);
@@ -325,9 +422,20 @@
             this.btn_20.TabIndex = 22;
             this.btn_20.UseVisualStyleBackColor = false;
             this.btn_20.Click += new System.EventHandler(this.ColorizeSlotButtons);
+=======
+            this.btn_20_3.BackColor = System.Drawing.Color.White;
+            this.btn_20_3.Location = new System.Drawing.Point(346, 431);
+            this.btn_20_3.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_20_3.Name = "btn_20_3";
+            this.btn_20_3.Size = new System.Drawing.Size(144, 36);
+            this.btn_20_3.TabIndex = 46;
+            this.btn_20_3.UseVisualStyleBackColor = false;
+            this.btn_20_3.Click += new System.EventHandler(this.ColorizeSlotButtons);
+>>>>>>> Stashed changes
             // 
-            // btn_19
+            // btn_19_3
             // 
+<<<<<<< Updated upstream
             this.btn_19.BackColor = System.Drawing.Color.White;
             this.btn_19.Location = new System.Drawing.Point(2, 390);
             this.btn_19.Margin = new System.Windows.Forms.Padding(2);
@@ -336,9 +444,20 @@
             this.btn_19.TabIndex = 21;
             this.btn_19.UseVisualStyleBackColor = false;
             this.btn_19.Click += new System.EventHandler(this.ColorizeSlotButtons);
+=======
+            this.btn_19_3.BackColor = System.Drawing.Color.White;
+            this.btn_19_3.Location = new System.Drawing.Point(346, 390);
+            this.btn_19_3.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_19_3.Name = "btn_19_3";
+            this.btn_19_3.Size = new System.Drawing.Size(144, 36);
+            this.btn_19_3.TabIndex = 45;
+            this.btn_19_3.UseVisualStyleBackColor = false;
+            this.btn_19_3.Click += new System.EventHandler(this.ColorizeSlotButtons);
+>>>>>>> Stashed changes
             // 
-            // btn_18
+            // btn_18_3
             // 
+<<<<<<< Updated upstream
             this.btn_18.BackColor = System.Drawing.Color.White;
             this.btn_18.Location = new System.Drawing.Point(2, 350);
             this.btn_18.Margin = new System.Windows.Forms.Padding(2);
@@ -347,9 +466,20 @@
             this.btn_18.TabIndex = 20;
             this.btn_18.UseVisualStyleBackColor = false;
             this.btn_18.Click += new System.EventHandler(this.ColorizeSlotButtons);
+=======
+            this.btn_18_3.BackColor = System.Drawing.Color.White;
+            this.btn_18_3.Location = new System.Drawing.Point(346, 350);
+            this.btn_18_3.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_18_3.Name = "btn_18_3";
+            this.btn_18_3.Size = new System.Drawing.Size(144, 36);
+            this.btn_18_3.TabIndex = 44;
+            this.btn_18_3.UseVisualStyleBackColor = false;
+            this.btn_18_3.Click += new System.EventHandler(this.ColorizeSlotButtons);
+>>>>>>> Stashed changes
             // 
-            // btn_16
+            // btn_16_3
             // 
+<<<<<<< Updated upstream
             this.btn_16.BackColor = System.Drawing.Color.White;
             this.btn_16.Location = new System.Drawing.Point(2, 296);
             this.btn_16.Margin = new System.Windows.Forms.Padding(2);
@@ -358,9 +488,20 @@
             this.btn_16.TabIndex = 19;
             this.btn_16.UseVisualStyleBackColor = false;
             this.btn_16.Click += new System.EventHandler(this.ColorizeSlotButtons);
+=======
+            this.btn_16_3.BackColor = System.Drawing.Color.White;
+            this.btn_16_3.Location = new System.Drawing.Point(346, 296);
+            this.btn_16_3.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_16_3.Name = "btn_16_3";
+            this.btn_16_3.Size = new System.Drawing.Size(144, 36);
+            this.btn_16_3.TabIndex = 43;
+            this.btn_16_3.UseVisualStyleBackColor = false;
+            this.btn_16_3.Click += new System.EventHandler(this.ColorizeSlotButtons);
+>>>>>>> Stashed changes
             // 
-            // btn_15
+            // btn_15_3
             // 
+<<<<<<< Updated upstream
             this.btn_15.BackColor = System.Drawing.Color.White;
             this.btn_15.Location = new System.Drawing.Point(2, 256);
             this.btn_15.Margin = new System.Windows.Forms.Padding(2);
@@ -369,9 +510,20 @@
             this.btn_15.TabIndex = 18;
             this.btn_15.UseVisualStyleBackColor = false;
             this.btn_15.Click += new System.EventHandler(this.ColorizeSlotButtons);
+=======
+            this.btn_15_3.BackColor = System.Drawing.Color.White;
+            this.btn_15_3.Location = new System.Drawing.Point(346, 256);
+            this.btn_15_3.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_15_3.Name = "btn_15_3";
+            this.btn_15_3.Size = new System.Drawing.Size(144, 36);
+            this.btn_15_3.TabIndex = 42;
+            this.btn_15_3.UseVisualStyleBackColor = false;
+            this.btn_15_3.Click += new System.EventHandler(this.ColorizeSlotButtons);
+>>>>>>> Stashed changes
             // 
-            // btn_14
+            // btn_14_3
             // 
+<<<<<<< Updated upstream
             this.btn_14.BackColor = System.Drawing.Color.White;
             this.btn_14.Location = new System.Drawing.Point(2, 216);
             this.btn_14.Margin = new System.Windows.Forms.Padding(2);
@@ -380,9 +532,20 @@
             this.btn_14.TabIndex = 17;
             this.btn_14.UseVisualStyleBackColor = false;
             this.btn_14.Click += new System.EventHandler(this.ColorizeSlotButtons);
+=======
+            this.btn_14_3.BackColor = System.Drawing.Color.White;
+            this.btn_14_3.Location = new System.Drawing.Point(346, 216);
+            this.btn_14_3.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_14_3.Name = "btn_14_3";
+            this.btn_14_3.Size = new System.Drawing.Size(144, 36);
+            this.btn_14_3.TabIndex = 41;
+            this.btn_14_3.UseVisualStyleBackColor = false;
+            this.btn_14_3.Click += new System.EventHandler(this.ColorizeSlotButtons);
+>>>>>>> Stashed changes
             // 
-            // btn_13
+            // btn_13_3
             // 
+<<<<<<< Updated upstream
             this.btn_13.BackColor = System.Drawing.Color.White;
             this.btn_13.Location = new System.Drawing.Point(2, 175);
             this.btn_13.Margin = new System.Windows.Forms.Padding(2);
@@ -391,9 +554,20 @@
             this.btn_13.TabIndex = 16;
             this.btn_13.UseVisualStyleBackColor = false;
             this.btn_13.Click += new System.EventHandler(this.ColorizeSlotButtons);
+=======
+            this.btn_13_3.BackColor = System.Drawing.Color.White;
+            this.btn_13_3.Location = new System.Drawing.Point(346, 175);
+            this.btn_13_3.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_13_3.Name = "btn_13_3";
+            this.btn_13_3.Size = new System.Drawing.Size(144, 36);
+            this.btn_13_3.TabIndex = 40;
+            this.btn_13_3.UseVisualStyleBackColor = false;
+            this.btn_13_3.Click += new System.EventHandler(this.ColorizeSlotButtons);
+>>>>>>> Stashed changes
             // 
-            // btn_10
+            // btn_10_3
             // 
+<<<<<<< Updated upstream
             this.btn_10.BackColor = System.Drawing.Color.White;
             this.btn_10.Location = new System.Drawing.Point(2, 122);
             this.btn_10.Margin = new System.Windows.Forms.Padding(2);
@@ -402,9 +576,20 @@
             this.btn_10.TabIndex = 15;
             this.btn_10.UseVisualStyleBackColor = false;
             this.btn_10.Click += new System.EventHandler(this.ColorizeSlotButtons);
+=======
+            this.btn_10_3.BackColor = System.Drawing.Color.White;
+            this.btn_10_3.Location = new System.Drawing.Point(346, 122);
+            this.btn_10_3.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_10_3.Name = "btn_10_3";
+            this.btn_10_3.Size = new System.Drawing.Size(144, 36);
+            this.btn_10_3.TabIndex = 39;
+            this.btn_10_3.UseVisualStyleBackColor = false;
+            this.btn_10_3.Click += new System.EventHandler(this.ColorizeSlotButtons);
+>>>>>>> Stashed changes
             // 
-            // btn_9
+            // btn_9_3
             // 
+<<<<<<< Updated upstream
             this.btn_9.BackColor = System.Drawing.Color.White;
             this.btn_9.Location = new System.Drawing.Point(2, 82);
             this.btn_9.Margin = new System.Windows.Forms.Padding(2);
@@ -413,9 +598,20 @@
             this.btn_9.TabIndex = 14;
             this.btn_9.UseVisualStyleBackColor = false;
             this.btn_9.Click += new System.EventHandler(this.ColorizeSlotButtons);
+=======
+            this.btn_9_3.BackColor = System.Drawing.Color.White;
+            this.btn_9_3.Location = new System.Drawing.Point(346, 82);
+            this.btn_9_3.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_9_3.Name = "btn_9_3";
+            this.btn_9_3.Size = new System.Drawing.Size(144, 36);
+            this.btn_9_3.TabIndex = 38;
+            this.btn_9_3.UseVisualStyleBackColor = false;
+            this.btn_9_3.Click += new System.EventHandler(this.ColorizeSlotButtons);
+>>>>>>> Stashed changes
             // 
-            // btn_8
+            // btn_8_3
             // 
+<<<<<<< Updated upstream
             this.btn_8.BackColor = System.Drawing.Color.White;
             this.btn_8.Location = new System.Drawing.Point(2, 42);
             this.btn_8.Margin = new System.Windows.Forms.Padding(2);
@@ -424,6 +620,280 @@
             this.btn_8.TabIndex = 13;
             this.btn_8.UseVisualStyleBackColor = false;
             this.btn_8.Click += new System.EventHandler(this.ColorizeSlotButtons);
+=======
+            this.btn_8_3.BackColor = System.Drawing.Color.White;
+            this.btn_8_3.Location = new System.Drawing.Point(346, 42);
+            this.btn_8_3.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_8_3.Name = "btn_8_3";
+            this.btn_8_3.Size = new System.Drawing.Size(144, 36);
+            this.btn_8_3.TabIndex = 37;
+            this.btn_8_3.UseVisualStyleBackColor = false;
+            this.btn_8_3.Click += new System.EventHandler(this.ColorizeSlotButtons);
+            // 
+            // btn_7_3
+            // 
+            this.btn_7_3.BackColor = System.Drawing.Color.White;
+            this.btn_7_3.Location = new System.Drawing.Point(346, 2);
+            this.btn_7_3.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_7_3.Name = "btn_7_3";
+            this.btn_7_3.Size = new System.Drawing.Size(144, 36);
+            this.btn_7_3.TabIndex = 36;
+            this.btn_7_3.UseVisualStyleBackColor = false;
+            this.btn_7_3.Click += new System.EventHandler(this.ColorizeSlotButtons);
+            // 
+            // btn_21_2
+            // 
+            this.btn_21_2.BackColor = System.Drawing.Color.White;
+            this.btn_21_2.Location = new System.Drawing.Point(176, 472);
+            this.btn_21_2.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_21_2.Name = "btn_21_2";
+            this.btn_21_2.Size = new System.Drawing.Size(144, 36);
+            this.btn_21_2.TabIndex = 35;
+            this.btn_21_2.UseVisualStyleBackColor = false;
+            this.btn_21_2.Click += new System.EventHandler(this.ColorizeSlotButtons);
+            // 
+            // btn_20_2
+            // 
+            this.btn_20_2.BackColor = System.Drawing.Color.White;
+            this.btn_20_2.Location = new System.Drawing.Point(176, 431);
+            this.btn_20_2.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_20_2.Name = "btn_20_2";
+            this.btn_20_2.Size = new System.Drawing.Size(144, 36);
+            this.btn_20_2.TabIndex = 34;
+            this.btn_20_2.UseVisualStyleBackColor = false;
+            this.btn_20_2.Click += new System.EventHandler(this.ColorizeSlotButtons);
+            // 
+            // btn_19_2
+            // 
+            this.btn_19_2.BackColor = System.Drawing.Color.White;
+            this.btn_19_2.Location = new System.Drawing.Point(176, 390);
+            this.btn_19_2.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_19_2.Name = "btn_19_2";
+            this.btn_19_2.Size = new System.Drawing.Size(144, 36);
+            this.btn_19_2.TabIndex = 33;
+            this.btn_19_2.UseVisualStyleBackColor = false;
+            this.btn_19_2.Click += new System.EventHandler(this.ColorizeSlotButtons);
+            // 
+            // btn_18_2
+            // 
+            this.btn_18_2.BackColor = System.Drawing.Color.White;
+            this.btn_18_2.Location = new System.Drawing.Point(176, 350);
+            this.btn_18_2.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_18_2.Name = "btn_18_2";
+            this.btn_18_2.Size = new System.Drawing.Size(144, 36);
+            this.btn_18_2.TabIndex = 32;
+            this.btn_18_2.UseVisualStyleBackColor = false;
+            this.btn_18_2.Click += new System.EventHandler(this.ColorizeSlotButtons);
+            // 
+            // btn_16_2
+            // 
+            this.btn_16_2.BackColor = System.Drawing.Color.White;
+            this.btn_16_2.Location = new System.Drawing.Point(176, 296);
+            this.btn_16_2.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_16_2.Name = "btn_16_2";
+            this.btn_16_2.Size = new System.Drawing.Size(144, 36);
+            this.btn_16_2.TabIndex = 31;
+            this.btn_16_2.UseVisualStyleBackColor = false;
+            this.btn_16_2.Click += new System.EventHandler(this.ColorizeSlotButtons);
+            // 
+            // btn_15_2
+            // 
+            this.btn_15_2.BackColor = System.Drawing.Color.White;
+            this.btn_15_2.Location = new System.Drawing.Point(176, 256);
+            this.btn_15_2.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_15_2.Name = "btn_15_2";
+            this.btn_15_2.Size = new System.Drawing.Size(144, 36);
+            this.btn_15_2.TabIndex = 30;
+            this.btn_15_2.UseVisualStyleBackColor = false;
+            this.btn_15_2.Click += new System.EventHandler(this.ColorizeSlotButtons);
+            // 
+            // btn_14_2
+            // 
+            this.btn_14_2.BackColor = System.Drawing.Color.White;
+            this.btn_14_2.Location = new System.Drawing.Point(176, 216);
+            this.btn_14_2.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_14_2.Name = "btn_14_2";
+            this.btn_14_2.Size = new System.Drawing.Size(144, 36);
+            this.btn_14_2.TabIndex = 29;
+            this.btn_14_2.UseVisualStyleBackColor = false;
+            this.btn_14_2.Click += new System.EventHandler(this.ColorizeSlotButtons);
+            // 
+            // btn_13_2
+            // 
+            this.btn_13_2.BackColor = System.Drawing.Color.White;
+            this.btn_13_2.Location = new System.Drawing.Point(176, 175);
+            this.btn_13_2.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_13_2.Name = "btn_13_2";
+            this.btn_13_2.Size = new System.Drawing.Size(144, 36);
+            this.btn_13_2.TabIndex = 28;
+            this.btn_13_2.UseVisualStyleBackColor = false;
+            this.btn_13_2.Click += new System.EventHandler(this.ColorizeSlotButtons);
+            // 
+            // btn_10_2
+            // 
+            this.btn_10_2.BackColor = System.Drawing.Color.White;
+            this.btn_10_2.Location = new System.Drawing.Point(176, 122);
+            this.btn_10_2.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_10_2.Name = "btn_10_2";
+            this.btn_10_2.Size = new System.Drawing.Size(144, 36);
+            this.btn_10_2.TabIndex = 27;
+            this.btn_10_2.UseVisualStyleBackColor = false;
+            this.btn_10_2.Click += new System.EventHandler(this.ColorizeSlotButtons);
+            // 
+            // btn_9_2
+            // 
+            this.btn_9_2.BackColor = System.Drawing.Color.White;
+            this.btn_9_2.Location = new System.Drawing.Point(176, 82);
+            this.btn_9_2.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_9_2.Name = "btn_9_2";
+            this.btn_9_2.Size = new System.Drawing.Size(144, 36);
+            this.btn_9_2.TabIndex = 26;
+            this.btn_9_2.UseVisualStyleBackColor = false;
+            this.btn_9_2.Click += new System.EventHandler(this.ColorizeSlotButtons);
+            // 
+            // btn_8_2
+            // 
+            this.btn_8_2.BackColor = System.Drawing.Color.White;
+            this.btn_8_2.Location = new System.Drawing.Point(176, 42);
+            this.btn_8_2.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_8_2.Name = "btn_8_2";
+            this.btn_8_2.Size = new System.Drawing.Size(144, 36);
+            this.btn_8_2.TabIndex = 25;
+            this.btn_8_2.UseVisualStyleBackColor = false;
+            this.btn_8_2.Click += new System.EventHandler(this.ColorizeSlotButtons);
+            // 
+            // btn_7_2
+            // 
+            this.btn_7_2.BackColor = System.Drawing.Color.White;
+            this.btn_7_2.Location = new System.Drawing.Point(176, 2);
+            this.btn_7_2.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_7_2.Name = "btn_7_2";
+            this.btn_7_2.Size = new System.Drawing.Size(144, 36);
+            this.btn_7_2.TabIndex = 24;
+            this.btn_7_2.UseVisualStyleBackColor = false;
+            this.btn_7_2.Click += new System.EventHandler(this.ColorizeSlotButtons);
+            // 
+            // btn_21_1
+            // 
+            this.btn_21_1.BackColor = System.Drawing.Color.White;
+            this.btn_21_1.Location = new System.Drawing.Point(2, 472);
+            this.btn_21_1.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_21_1.Name = "btn_21_1";
+            this.btn_21_1.Size = new System.Drawing.Size(144, 36);
+            this.btn_21_1.TabIndex = 23;
+            this.btn_21_1.UseVisualStyleBackColor = false;
+            this.btn_21_1.Click += new System.EventHandler(this.ColorizeSlotButtons);
+            // 
+            // btn_20_1
+            // 
+            this.btn_20_1.BackColor = System.Drawing.Color.White;
+            this.btn_20_1.Location = new System.Drawing.Point(2, 431);
+            this.btn_20_1.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_20_1.Name = "btn_20_1";
+            this.btn_20_1.Size = new System.Drawing.Size(144, 36);
+            this.btn_20_1.TabIndex = 22;
+            this.btn_20_1.UseVisualStyleBackColor = false;
+            this.btn_20_1.Click += new System.EventHandler(this.ColorizeSlotButtons);
+            // 
+            // btn_19_1
+            // 
+            this.btn_19_1.BackColor = System.Drawing.Color.White;
+            this.btn_19_1.Location = new System.Drawing.Point(2, 390);
+            this.btn_19_1.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_19_1.Name = "btn_19_1";
+            this.btn_19_1.Size = new System.Drawing.Size(144, 36);
+            this.btn_19_1.TabIndex = 21;
+            this.btn_19_1.UseVisualStyleBackColor = false;
+            this.btn_19_1.Click += new System.EventHandler(this.ColorizeSlotButtons);
+            // 
+            // btn_18_1
+            // 
+            this.btn_18_1.BackColor = System.Drawing.Color.White;
+            this.btn_18_1.Location = new System.Drawing.Point(2, 350);
+            this.btn_18_1.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_18_1.Name = "btn_18_1";
+            this.btn_18_1.Size = new System.Drawing.Size(144, 36);
+            this.btn_18_1.TabIndex = 20;
+            this.btn_18_1.UseVisualStyleBackColor = false;
+            this.btn_18_1.Click += new System.EventHandler(this.ColorizeSlotButtons);
+            // 
+            // btn_16_1
+            // 
+            this.btn_16_1.BackColor = System.Drawing.Color.White;
+            this.btn_16_1.Location = new System.Drawing.Point(2, 296);
+            this.btn_16_1.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_16_1.Name = "btn_16_1";
+            this.btn_16_1.Size = new System.Drawing.Size(144, 36);
+            this.btn_16_1.TabIndex = 19;
+            this.btn_16_1.UseVisualStyleBackColor = false;
+            this.btn_16_1.Click += new System.EventHandler(this.ColorizeSlotButtons);
+            // 
+            // btn_15_1
+            // 
+            this.btn_15_1.BackColor = System.Drawing.Color.White;
+            this.btn_15_1.Location = new System.Drawing.Point(2, 256);
+            this.btn_15_1.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_15_1.Name = "btn_15_1";
+            this.btn_15_1.Size = new System.Drawing.Size(144, 36);
+            this.btn_15_1.TabIndex = 18;
+            this.btn_15_1.UseVisualStyleBackColor = false;
+            this.btn_15_1.Click += new System.EventHandler(this.ColorizeSlotButtons);
+            // 
+            // btn_14_1
+            // 
+            this.btn_14_1.BackColor = System.Drawing.Color.White;
+            this.btn_14_1.Location = new System.Drawing.Point(2, 216);
+            this.btn_14_1.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_14_1.Name = "btn_14_1";
+            this.btn_14_1.Size = new System.Drawing.Size(144, 36);
+            this.btn_14_1.TabIndex = 17;
+            this.btn_14_1.UseVisualStyleBackColor = false;
+            this.btn_14_1.Click += new System.EventHandler(this.ColorizeSlotButtons);
+            // 
+            // btn_13_1
+            // 
+            this.btn_13_1.BackColor = System.Drawing.Color.White;
+            this.btn_13_1.Location = new System.Drawing.Point(2, 175);
+            this.btn_13_1.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_13_1.Name = "btn_13_1";
+            this.btn_13_1.Size = new System.Drawing.Size(144, 36);
+            this.btn_13_1.TabIndex = 16;
+            this.btn_13_1.UseVisualStyleBackColor = false;
+            this.btn_13_1.Click += new System.EventHandler(this.ColorizeSlotButtons);
+            // 
+            // btn_10_1
+            // 
+            this.btn_10_1.BackColor = System.Drawing.Color.White;
+            this.btn_10_1.Location = new System.Drawing.Point(2, 122);
+            this.btn_10_1.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_10_1.Name = "btn_10_1";
+            this.btn_10_1.Size = new System.Drawing.Size(144, 36);
+            this.btn_10_1.TabIndex = 15;
+            this.btn_10_1.UseVisualStyleBackColor = false;
+            this.btn_10_1.Click += new System.EventHandler(this.ColorizeSlotButtons);
+            // 
+            // btn_9_1
+            // 
+            this.btn_9_1.BackColor = System.Drawing.Color.White;
+            this.btn_9_1.Location = new System.Drawing.Point(2, 82);
+            this.btn_9_1.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_9_1.Name = "btn_9_1";
+            this.btn_9_1.Size = new System.Drawing.Size(144, 36);
+            this.btn_9_1.TabIndex = 14;
+            this.btn_9_1.UseVisualStyleBackColor = false;
+            this.btn_9_1.Click += new System.EventHandler(this.ColorizeSlotButtons);
+            // 
+            // btn_8_1
+            // 
+            this.btn_8_1.BackColor = System.Drawing.Color.White;
+            this.btn_8_1.Location = new System.Drawing.Point(2, 42);
+            this.btn_8_1.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_8_1.Name = "btn_8_1";
+            this.btn_8_1.Size = new System.Drawing.Size(144, 36);
+            this.btn_8_1.TabIndex = 13;
+            this.btn_8_1.UseVisualStyleBackColor = false;
+            this.btn_8_1.Click += new System.EventHandler(this.ColorizeSlotButtons);
+>>>>>>> Stashed changes
             // 
             // mCd_calendar
             // 
@@ -677,7 +1147,14 @@
             this.Controls.Add(this.pn_Monday);
             this.Controls.Add(this.mCd_calendar);
             this.Controls.Add(this.panel1);
+<<<<<<< Updated upstream
             this.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+>>>>>>> Stashed changes
             this.Name = "TimeSelection";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chọn thời gian đặt sân";
@@ -701,7 +1178,7 @@
         private System.Windows.Forms.Label lb_7PM;
         private System.Windows.Forms.Label lb_6PM;
         private System.Windows.Forms.Label lb_4PM;
-        private System.Windows.Forms.Button btn_7;
+        private System.Windows.Forms.Button btn_7_1;
         private System.Windows.Forms.Label lb_3PM;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lb_2PM;
@@ -730,18 +1207,50 @@
         private System.Windows.Forms.Label lb_LightBlue;
         private System.Windows.Forms.Label lb_LightYellow;
         private System.Windows.Forms.Label lb_TotalNeeded;
-        private System.Windows.Forms.Button btn_8;
-        private System.Windows.Forms.Button btn_21;
-        private System.Windows.Forms.Button btn_20;
-        private System.Windows.Forms.Button btn_19;
-        private System.Windows.Forms.Button btn_18;
-        private System.Windows.Forms.Button btn_16;
-        private System.Windows.Forms.Button btn_15;
-        private System.Windows.Forms.Button btn_14;
-        private System.Windows.Forms.Button btn_13;
-        private System.Windows.Forms.Button btn_10;
-        private System.Windows.Forms.Button btn_9;
+        private System.Windows.Forms.Button btn_8_1;
+        private System.Windows.Forms.Button btn_21_1;
+        private System.Windows.Forms.Button btn_20_1;
+        private System.Windows.Forms.Button btn_19_1;
+        private System.Windows.Forms.Button btn_18_1;
+        private System.Windows.Forms.Button btn_16_1;
+        private System.Windows.Forms.Button btn_15_1;
+        private System.Windows.Forms.Button btn_14_1;
+        private System.Windows.Forms.Button btn_13_1;
+        private System.Windows.Forms.Button btn_10_1;
+        private System.Windows.Forms.Button btn_9_1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+<<<<<<< Updated upstream
+=======
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem càiĐặtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmi_ChangeSport;
+        private System.Windows.Forms.Button btn_21_3;
+        private System.Windows.Forms.Button btn_20_3;
+        private System.Windows.Forms.Button btn_19_3;
+        private System.Windows.Forms.Button btn_18_3;
+        private System.Windows.Forms.Button btn_16_3;
+        private System.Windows.Forms.Button btn_15_3;
+        private System.Windows.Forms.Button btn_14_3;
+        private System.Windows.Forms.Button btn_13_3;
+        private System.Windows.Forms.Button btn_10_3;
+        private System.Windows.Forms.Button btn_9_3;
+        private System.Windows.Forms.Button btn_8_3;
+        private System.Windows.Forms.Button btn_7_3;
+        private System.Windows.Forms.Button btn_21_2;
+        private System.Windows.Forms.Button btn_20_2;
+        private System.Windows.Forms.Button btn_19_2;
+        private System.Windows.Forms.Button btn_18_2;
+        private System.Windows.Forms.Button btn_16_2;
+        private System.Windows.Forms.Button btn_15_2;
+        private System.Windows.Forms.Button btn_14_2;
+        private System.Windows.Forms.Button btn_13_2;
+        private System.Windows.Forms.Button btn_10_2;
+        private System.Windows.Forms.Button btn_9_2;
+        private System.Windows.Forms.Button btn_8_2;
+        private System.Windows.Forms.Button btn_7_2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+>>>>>>> Stashed changes
     }
 }

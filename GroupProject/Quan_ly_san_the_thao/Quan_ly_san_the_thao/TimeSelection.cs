@@ -212,10 +212,20 @@ namespace Quan_ly_san_the_thao
             this.Close();
         }
 
+<<<<<<< Updated upstream
+=======
+        private void Tsmi_ChangeSport_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        
+
+>>>>>>> Stashed changes
         private void TimeSelection_Shown(object sender, EventArgs e)
         {
             string sportShowing = currentSport;
-            string query = "SELECT GTSANG, GTTRUA, GTTOI, MASANTT FROM SANTHETHAO WHERE MONTHETHAO = @Sport";
+            string query = "SELECT GTSANG, GTCHIEU, GTTOI, MASANTT FROM SANTHETHAO WHERE MONTHETHAO = @Sport";
             using (SqlConnection connection = new SqlConnection(connectionString))
             using (SqlCommand command = new SqlCommand(query, connection))
             {
