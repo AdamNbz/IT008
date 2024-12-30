@@ -26,7 +26,7 @@
 
 ## GIẢNG VIÊN HƯỚNG DẪN
 <a name="giangvien"></a>
-* KS. **Đặng Việt Dũng** - *dungdv@uit.edu.vn*
+* ThS. **Đặng Việt Dũng** - *dungdv@uit.edu.vn*
 
 
 ## THÀNH VIÊN NHÓM
