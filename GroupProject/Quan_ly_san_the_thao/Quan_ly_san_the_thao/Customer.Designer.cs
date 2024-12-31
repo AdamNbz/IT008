@@ -31,12 +31,13 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dgv_Coupon = new System.Windows.Forms.DataGridView();
-            this.btn_Return = new System.Windows.Forms.Button();
             this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SLHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_Return = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Coupon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,7 +59,7 @@
             this.button1.BackColor = System.Drawing.Color.DodgerBlue;
             this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(162, 317);
+            this.button1.Location = new System.Drawing.Point(199, 317);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(155, 33);
@@ -82,20 +83,6 @@
             this.dgv_Coupon.RowTemplate.Height = 24;
             this.dgv_Coupon.Size = new System.Drawing.Size(539, 245);
             this.dgv_Coupon.TabIndex = 15;
-            // 
-            // btn_Return
-            // 
-            this.btn_Return.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Return.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Return.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Return.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_Return.Image = global::Quan_ly_san_the_thao.Properties.Resources.back_arrow;
-            this.btn_Return.Location = new System.Drawing.Point(11, 8);
-            this.btn_Return.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btn_Return.Name = "btn_Return";
-            this.btn_Return.Size = new System.Drawing.Size(21, 23);
-            this.btn_Return.TabIndex = 14;
-            this.btn_Return.UseVisualStyleBackColor = false;
             // 
             // Username
             // 
@@ -128,12 +115,40 @@
             this.SLHoaDon.HeaderText = "Số lượng hóa đơn";
             this.SLHoaDon.Name = "SLHoaDon";
             // 
+            // btn_Return
+            // 
+            this.btn_Return.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Return.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Return.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Return.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_Return.Image = global::Quan_ly_san_the_thao.Properties.Resources.back_arrow;
+            this.btn_Return.Location = new System.Drawing.Point(11, 8);
+            this.btn_Return.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btn_Return.Name = "btn_Return";
+            this.btn_Return.Size = new System.Drawing.Size(21, 23);
+            this.btn_Return.TabIndex = 14;
+            this.btn_Return.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Location = new System.Drawing.Point(395, 317);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(155, 33);
+            this.button3.TabIndex = 25;
+            this.button3.Text = "Đổi mật khẩu";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(563, 360);
+            this.ClientSize = new System.Drawing.Size(567, 360);
             this.Controls.Add(this.button2);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgv_Coupon);
             this.Controls.Add(this.btn_Return);
@@ -155,5 +170,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn SLHoaDon;
+        private System.Windows.Forms.Button button3;
     }
 }
