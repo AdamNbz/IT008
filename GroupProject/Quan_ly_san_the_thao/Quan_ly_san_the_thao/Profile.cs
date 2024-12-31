@@ -29,7 +29,7 @@ namespace Quan_ly_san_the_thao
             tb_Fullname.Text = userData["TENKH"].ToString();
             tb_Username.Text = userData["USERNAME"].ToString();
             tb_PhoneNumber.Text = userData["SDT"].ToString();
-            tb_Gender.Text = (bool)userData["GTINH"] ? "Nam" : "Nữ";
+            //tb_Gender.Text = (bool)userData["GTINH"] ? "Nam" : "Nữ";
             tb_Email.Text = userData["EMAIL"].ToString();
 
             string query = "SELECT COUNT(*) FROM HOADON HD JOIN KHACHHANG KH ON HD.USERNAME = KH.USERNAME WHERE HD.USERNAME = @username";
