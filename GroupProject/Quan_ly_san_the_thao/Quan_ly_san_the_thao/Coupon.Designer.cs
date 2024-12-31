@@ -30,20 +30,23 @@
         {
             this.btn_Return = new System.Windows.Forms.Button();
             this.dgv_Coupon = new System.Windows.Forms.DataGridView();
+            this.CouponCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThoiGianBatDauColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThoiGianKetThucColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lb_CouponCode = new System.Windows.Forms.Label();
             this.lb_Type = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tb_CouponCode = new System.Windows.Forms.TextBox();
+            this.cb_Type = new System.Windows.Forms.ComboBox();
             this.lb_Value = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tb_Value = new System.Windows.Forms.TextBox();
             this.btn_Add = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
             this.lb_Publish = new System.Windows.Forms.Label();
             this.ckb_Publish = new System.Windows.Forms.CheckBox();
-            this.CouponCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Publish = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_Export = new System.Windows.Forms.Button();
+            this.btn_Search = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Coupon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +57,7 @@
             this.btn_Return.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Return.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_Return.Image = global::Quan_ly_san_the_thao.Properties.Resources.back_arrow;
-            this.btn_Return.Location = new System.Drawing.Point(12, 13);
+            this.btn_Return.Location = new System.Drawing.Point(12, 14);
             this.btn_Return.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_Return.Name = "btn_Return";
             this.btn_Return.Size = new System.Drawing.Size(28, 28);
@@ -69,13 +72,50 @@
             this.CouponCode,
             this.Type,
             this.Value,
-            this.Publish});
+            this.ThoiGianBatDauColumn,
+            this.ThoiGianKetThucColumn});
             this.dgv_Coupon.Location = new System.Drawing.Point(12, 48);
+            this.dgv_Coupon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_Coupon.Name = "dgv_Coupon";
             this.dgv_Coupon.RowHeadersWidth = 51;
             this.dgv_Coupon.RowTemplate.Height = 24;
-            this.dgv_Coupon.Size = new System.Drawing.Size(776, 301);
+            this.dgv_Coupon.Size = new System.Drawing.Size(719, 302);
             this.dgv_Coupon.TabIndex = 3;
+            // 
+            // CouponCode
+            // 
+            this.CouponCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CouponCode.HeaderText = "Mã giảm giá";
+            this.CouponCode.MinimumWidth = 6;
+            this.CouponCode.Name = "CouponCode";
+            // 
+            // Type
+            // 
+            this.Type.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Type.HeaderText = "Môn thể thao áp dụng";
+            this.Type.MinimumWidth = 6;
+            this.Type.Name = "Type";
+            // 
+            // Value
+            // 
+            this.Value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Value.HeaderText = "Giá trị giảm";
+            this.Value.MinimumWidth = 6;
+            this.Value.Name = "Value";
+            // 
+            // ThoiGianBatDauColumn
+            // 
+            this.ThoiGianBatDauColumn.HeaderText = "Thời gian bắt đầu";
+            this.ThoiGianBatDauColumn.MinimumWidth = 6;
+            this.ThoiGianBatDauColumn.Name = "ThoiGianBatDauColumn";
+            this.ThoiGianBatDauColumn.Width = 125;
+            // 
+            // ThoiGianKetThucColumn
+            // 
+            this.ThoiGianKetThucColumn.HeaderText = "Thời gian kết thúc";
+            this.ThoiGianKetThucColumn.MinimumWidth = 6;
+            this.ThoiGianKetThucColumn.Name = "ThoiGianKetThucColumn";
+            this.ThoiGianKetThucColumn.Width = 125;
             // 
             // lb_CouponCode
             // 
@@ -101,23 +141,25 @@
             this.lb_Type.TabIndex = 5;
             this.lb_Type.Text = "Loại:";
             // 
-            // textBox1
+            // tb_CouponCode
             // 
-            this.textBox1.Location = new System.Drawing.Point(198, 368);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 22);
-            this.textBox1.TabIndex = 6;
+            this.tb_CouponCode.Location = new System.Drawing.Point(197, 368);
+            this.tb_CouponCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_CouponCode.Name = "tb_CouponCode";
+            this.tb_CouponCode.Size = new System.Drawing.Size(151, 22);
+            this.tb_CouponCode.TabIndex = 6;
             // 
-            // comboBox1
+            // cb_Type
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cb_Type.FormattingEnabled = true;
+            this.cb_Type.Items.AddRange(new object[] {
             "Vĩnh viễn",
             "Quà tặng"});
-            this.comboBox1.Location = new System.Drawing.Point(530, 370);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(150, 24);
-            this.comboBox1.TabIndex = 7;
+            this.cb_Type.Location = new System.Drawing.Point(531, 370);
+            this.cb_Type.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cb_Type.Name = "cb_Type";
+            this.cb_Type.Size = new System.Drawing.Size(151, 24);
+            this.cb_Type.TabIndex = 7;
             // 
             // lb_Value
             // 
@@ -131,19 +173,21 @@
             this.lb_Value.TabIndex = 8;
             this.lb_Value.Text = "Giá trị:";
             // 
-            // textBox2
+            // tb_Value
             // 
-            this.textBox2.Location = new System.Drawing.Point(198, 418);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 22);
-            this.textBox2.TabIndex = 9;
+            this.tb_Value.Location = new System.Drawing.Point(197, 418);
+            this.tb_Value.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_Value.Name = "tb_Value";
+            this.tb_Value.Size = new System.Drawing.Size(151, 22);
+            this.tb_Value.TabIndex = 9;
             // 
             // btn_Add
             // 
             this.btn_Add.BackColor = System.Drawing.Color.DodgerBlue;
             this.btn_Add.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Add.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_Add.Location = new System.Drawing.Point(667, 482);
+            this.btn_Add.Location = new System.Drawing.Point(609, 481);
+            this.btn_Add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(121, 41);
             this.btn_Add.TabIndex = 10;
@@ -155,7 +199,8 @@
             this.btn_Delete.BackColor = System.Drawing.Color.DodgerBlue;
             this.btn_Delete.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Delete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_Delete.Location = new System.Drawing.Point(530, 482);
+            this.btn_Delete.Location = new System.Drawing.Point(473, 481);
+            this.btn_Delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(121, 41);
             this.btn_Delete.TabIndex = 11;
@@ -178,58 +223,60 @@
             // 
             this.ckb_Publish.AutoSize = true;
             this.ckb_Publish.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckb_Publish.Location = new System.Drawing.Point(533, 418);
+            this.ckb_Publish.Location = new System.Drawing.Point(545, 421);
+            this.ckb_Publish.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ckb_Publish.Name = "ckb_Publish";
             this.ckb_Publish.Size = new System.Drawing.Size(18, 17);
             this.ckb_Publish.TabIndex = 13;
             this.ckb_Publish.UseVisualStyleBackColor = true;
             // 
-            // CouponCode
+            // btn_Export
             // 
-            this.CouponCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CouponCode.HeaderText = "Mã giảm giá";
-            this.CouponCode.MinimumWidth = 6;
-            this.CouponCode.Name = "CouponCode";
+            this.btn_Export.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_Export.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Export.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Export.Location = new System.Drawing.Point(239, 480);
+            this.btn_Export.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Export.Name = "btn_Export";
+            this.btn_Export.Size = new System.Drawing.Size(207, 41);
+            this.btn_Export.TabIndex = 11;
+            this.btn_Export.Text = "Xuất báo cáo";
+            this.btn_Export.UseVisualStyleBackColor = false;
             // 
-            // Type
+            // btn_Search
             // 
-            this.Type.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Type.HeaderText = "Loại";
-            this.Type.MinimumWidth = 6;
-            this.Type.Name = "Type";
-            // 
-            // Value
-            // 
-            this.Value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Value.HeaderText = "Giá trị";
-            this.Value.MinimumWidth = 6;
-            this.Value.Name = "Value";
-            // 
-            // Publish
-            // 
-            this.Publish.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Publish.HeaderText = "Công bố";
-            this.Publish.MinimumWidth = 6;
-            this.Publish.Name = "Publish";
+            this.btn_Search.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_Search.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Search.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Search.Location = new System.Drawing.Point(48, 480);
+            this.btn_Search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(165, 41);
+            this.btn_Search.TabIndex = 11;
+            this.btn_Search.Text = "Tìm kiếm";
+            this.btn_Search.UseVisualStyleBackColor = false;
             // 
             // Coupon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 535);
+            this.ClientSize = new System.Drawing.Size(752, 535);
             this.Controls.Add(this.ckb_Publish);
             this.Controls.Add(this.lb_Publish);
+            this.Controls.Add(this.btn_Search);
+            this.Controls.Add(this.btn_Export);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_Add);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tb_Value);
             this.Controls.Add(this.lb_Value);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cb_Type);
+            this.Controls.Add(this.tb_CouponCode);
             this.Controls.Add(this.lb_Type);
             this.Controls.Add(this.lb_CouponCode);
             this.Controls.Add(this.dgv_Coupon);
             this.Controls.Add(this.btn_Return);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Coupon";
             this.Text = "Coupon";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Coupon)).EndInit();
@@ -244,17 +291,20 @@
         private System.Windows.Forms.DataGridView dgv_Coupon;
         private System.Windows.Forms.Label lb_CouponCode;
         private System.Windows.Forms.Label lb_Type;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox tb_CouponCode;
+        private System.Windows.Forms.ComboBox cb_Type;
         private System.Windows.Forms.Label lb_Value;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tb_Value;
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.Button btn_Delete;
         private System.Windows.Forms.Label lb_Publish;
+        private System.Windows.Forms.CheckBox ckb_Publish;
+        private System.Windows.Forms.Button btn_Export;
+        private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.DataGridViewTextBoxColumn CouponCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn Type;
         private System.Windows.Forms.DataGridViewTextBoxColumn Value;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Publish;
-        private System.Windows.Forms.CheckBox ckb_Publish;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGianBatDauColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGianKetThucColumn;
     }
 }

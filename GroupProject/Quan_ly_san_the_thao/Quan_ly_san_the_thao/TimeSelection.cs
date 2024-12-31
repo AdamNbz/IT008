@@ -122,7 +122,7 @@ namespace Quan_ly_san_the_thao
             UpdateSlots();
         }
 
-        private void ColorizeSlotButtons(dynamic sender, EventArgs e)
+        public void ColorizeSlotButtons(dynamic sender, EventArgs e)
         {
             if (sender.BackColor == Color.White)
             {
@@ -216,6 +216,8 @@ namespace Quan_ly_san_the_thao
         {
             this.Close();
         }
+
+        
 
         private void TimeSelection_Shown(object sender, EventArgs e)
         {
