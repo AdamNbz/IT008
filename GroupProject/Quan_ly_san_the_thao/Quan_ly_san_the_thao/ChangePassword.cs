@@ -57,5 +57,10 @@ namespace Quan_ly_san_the_thao
         {
             this.Close();
         }
+
+        private void btn_Return_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
