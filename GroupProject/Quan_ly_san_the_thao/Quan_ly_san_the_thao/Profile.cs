@@ -14,7 +14,7 @@ namespace Quan_ly_san_the_thao
     public partial class Profile : Form
     {
         DataRow userData;
-        private string connectionString = @"Data Source=.\MSSQLSERVER01;Initial Catalog=IT8_DATABASE_PROJECT;Integrated Security=True";
+        private string sqlConnectionString = @"Data Source=.\MSSQLSERVER01;Initial Catalog=IT8_DATABASE_PROJECT;Integrated Security=True";
         public Profile(DataRow userData)
         {
             InitializeComponent();
@@ -29,11 +29,11 @@ namespace Quan_ly_san_the_thao
             tb_Fullname.Text = userData["TENKH"].ToString();
             tb_Username.Text = userData["USERNAME"].ToString();
             tb_PhoneNumber.Text = userData["SDT"].ToString();
-            //tb_Gender.Text = (bool)userData["GTINH"] ? "Nam" : "Nữ";
+            tb_Gender.Text = (bool)userData["GTINH"] ? "Nam" : "Nữ";
             tb_Email.Text = userData["EMAIL"].ToString();
 
             string query = "SELECT COUNT(*) FROM HOADON HD JOIN KHACHHANG KH ON HD.USERNAME = KH.USERNAME WHERE HD.USERNAME = @username";
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(sqlConnectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@username", tb_Username.Text);
@@ -43,9 +43,9 @@ namespace Quan_ly_san_the_thao
             }
         }
 
-        private void btn_Return_Click(object sender, EventArgs e)
+        private void btn_Close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
     }
 }

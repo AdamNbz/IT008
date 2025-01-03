@@ -18,7 +18,7 @@ namespace Quan_ly_san_the_thao
         {
             InitializeComponent();
             this.username = username;
-            this.userData = new DatabaseHelper().GetUsernameAndPwd(username);
+            this.userData = new DatabaseHelper().GetCredentials(username);
         }
 
         private void btn_ChangePw_Click(object sender, EventArgs e)
@@ -50,7 +50,6 @@ namespace Quan_ly_san_the_thao
                 MessageBox.Show("Đổi mật khẩu thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
         }
 
         private void btn_Back_Click(object sender, EventArgs e)

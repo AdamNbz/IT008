@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Color = System.Drawing.Color;
 
 namespace Quan_ly_san_the_thao
 {
@@ -20,7 +21,7 @@ namespace Quan_ly_san_the_thao
         int selectedSlot;
         DateTime selectedDay = new DateTime();
         private string connectionString = @"Data Source=.\MSSQLSERVER01;Initial Catalog=IT8_DATABASE_PROJECT;Integrated Security=True";
-
+        int selectedField;
         public TimeSelection(DataRow user, string sport)
         {
             InitializeComponent();
@@ -47,9 +48,9 @@ namespace Quan_ly_san_the_thao
 
         private void UpdateSlots()
         {
-            string query = @"SELECT C.KHUNGGIO
+            string query = @"SELECT C.KHUNGGIO, C.SANDAT
                              FROM SANTHETHAO STT JOIN CTHD C ON C.MASANTT = STT.MASANTT
-                             WHERE C.NGHDHLUC = @Selected AND STT.MONTHETHAO = @currentSport";
+                             WHERE C.NGHDHLUC = @Selected AND STT.MONTHETHAO = @currentSport"; 
             using (SqlConnection connection = new SqlConnection(connectionString))
             using (SqlCommand cmd = new SqlCommand(query, connection))
             {
@@ -60,37 +61,23 @@ namespace Quan_ly_san_the_thao
                 {
                     while (reader.Read())
                     {
-                        int slot = reader.GetByte(reader.GetOrdinal("KHUNGGIO"));
-                        MarkedSlot(slot);
+                        string slotStr = reader["KHUNGGIO"].ToString();
+                        int slot = int.Parse(slotStr);
+                        string sanDat = reader.GetString(reader.GetOrdinal("SANDAT"));
+                        MarkedSlot(slot, sanDat);
                     }
                 }
             }
         }
 
-        private void MarkedSlot(int slot)
+        private void MarkedSlot(int slot, string sanDat)
         {
-            if (slot >= 7 && slot <= 10)
+            for (int i = 0; i < sanDat.Length; i++)
             {
-                for (int j = 7; j <= 10; j++)
+                if (sanDat[i] == '1')
                 {
-                    Button btn = this.Controls.Find("btn_" + j, true).FirstOrDefault() as Button;
-                    if (btn != null && j == slot) btn.BackColor = Color.LightYellow;
-                }
-            }
-            else if (slot >= 13 && slot <= 16)
-            {
-                for (int j = 13; j <= 16; j++)
-                {
-                    Button btn = this.Controls.Find("btn_" + j, true).FirstOrDefault() as Button;
-                    if (btn != null && j == slot) btn.BackColor = Color.LightYellow;
-                }
-            }
-            else
-            {
-                for (int j = 18; j <= 21; j++)
-                {
-                    Button btn = this.Controls.Find("btn_" + j, true).FirstOrDefault() as Button;
-                    if (btn != null && j == slot) btn.BackColor = Color.LightYellow;
+                    Button btn = this.Controls.Find($"btn_{slot}_{i + 1}", true).FirstOrDefault() as Button;
+                    if (btn != null) btn.BackColor = Color.LightYellow;
                 }
             }
         }
@@ -106,72 +93,81 @@ namespace Quan_ly_san_the_thao
             }
             for (int i = 7; i <= 10; i++)
             {
-                Button btn = this.Controls.Find("btn_" + i, true).FirstOrDefault() as Button;
-                btn.BackColor = Color.White;
+                for (int j = 1; j <= 3; j++)
+                {
+                    Button btn = this.Controls.Find($"btn_{i}_{j}", true).FirstOrDefault() as Button;
+                    if (btn != null) btn.BackColor = Color.White;
+                }
             }
             for (int i = 13; i <= 16; i++)
             {
-                Button btn = this.Controls.Find("btn_" + i, true).FirstOrDefault() as Button;
-                btn.BackColor = Color.White;
+                for (int j = 1; j <= 3; j++)
+                {
+                    Button btn = this.Controls.Find($"btn_{i}_{j}", true).FirstOrDefault() as Button;
+                    if (btn != null) btn.BackColor = Color.White;
+                }
             }
             for (int i = 18; i <= 21; i++)
             {
-                Button btn = this.Controls.Find("btn_" + i, true).FirstOrDefault() as Button;
-                btn.BackColor = Color.White;
+                for (int j = 1; j <= 3; j++)
+                {
+                    Button btn = this.Controls.Find($"btn_{i}_{j}", true).FirstOrDefault() as Button;
+                    if (btn != null) btn.BackColor = Color.White;
+                }
             }
             UpdateSlots();
         }
 
         public void ColorizeSlotButtons(dynamic sender, EventArgs e)
         {
-            if (sender.BackColor == Color.White)
-            {
-                sender.BackColor = Color.LightBlue;
-                if (prev_sender == null)
-                {
-                    prev_sender = sender;
-                }
-                else
-                {
-                    prev_sender.BackColor = Color.White;
-                    prev_sender = sender;
-                }
-            }
-            else if (sender.BackColor == Color.LightBlue)
-            {
-                sender.BackColor = Color.White;
-                prev_sender = null;
-                totalPrice = 0;
-                lb_TotalNeeded.Text = "Tổng tiền: 0VND";
-                return;
-            }
-            else if (sender.BackColor == Color.LightYellow)
-            {
-                MessageBox.Show("Khung giờ này đã được đặt.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-
             Button currentBtn = sender as Button;
             string[] parts = currentBtn.Name.Split('_');
-            selectedSlot = int.Parse(parts[1]);
+            int slot = int.Parse(parts[1]);
+            int san = int.Parse(parts[2]);
 
-            if (selectedSlot >= 7 && selectedSlot <= 10)
+            if (selectedSlot == 0 && selectedField == 0)
             {
-                lb_TotalNeeded.Text = "Tổng tiền: " + lb_MorningPrice.Text;
-                totalPrice = ParsePrice(lb_MorningPrice.Text);
-            }
-            else if (selectedSlot >= 13 && selectedSlot <= 16)
-            {
-                lb_TotalNeeded.Text = "Tổng tiền: " + lb_AfternoonPrice.Text;
-                totalPrice = ParsePrice(lb_AfternoonPrice.Text);
+                currentBtn.BackColor = Color.LightBlue;
+                selectedSlot = slot;
+                selectedField = san;
+                totalPrice += GetSlotPrice(slot);
+                lb_TotalNeeded.Text = "Tổng tiền: " + totalPrice.ToString("0.000VND");
+                UpdateVerifyButtonState();
             }
             else
             {
-                lb_TotalNeeded.Text = "Tổng tiền: " + lb_EveningPrice.Text;
-                totalPrice = ParsePrice(lb_EveningPrice.Text);
-            }
+                if (slot == selectedSlot && san == selectedField)
+                {
+                    currentBtn.BackColor = Color.White;
+                    totalPrice -= GetSlotPrice(slot);
+                    lb_TotalNeeded.Text = "Tổng tiền: " + totalPrice.ToString("0.000VND");
 
-            UpdateVerifyButtonState();
+                    selectedSlot = 0;
+                    selectedField = 0;
+                    UpdateVerifyButtonState();
+                }
+                else
+                {
+                    MessageBox.Show("Bạn chỉ được chọn 1 slot và 1 sân!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+        }
+
+        private decimal GetSlotPrice(int slot)
+        {
+            if (slot >= 7 && slot <= 10)
+            {
+                return ParsePrice(lb_MorningPrice.Text);
+            }
+            else if (slot >= 13 && slot <= 16)
+            {
+                return ParsePrice(lb_AfternoonPrice.Text);
+            }
+            else
+            {
+                return ParsePrice(lb_EveningPrice.Text);
+            }
         }
 
         private void UpdateVerifyButtonState()
@@ -182,10 +178,13 @@ namespace Quan_ly_san_the_thao
         private void btn_Verify_Click(object sender, EventArgs e)
         {
             string ID = Guid.NewGuid().ToString().Substring(0, 10).ToUpper();
+            string paymentMethod = "none";
+            int invoiceStatus = 0;
 
-            string insertHoaDonQuery = @"INSERT INTO HOADON (MAHD, USERNAME, TRIGIA, NGTTOAN) VALUES (@MAHD, @USERNAME, @TRIGIA, @NGTTOAN)";
-            string query = @"INSERT INTO CTHD (MAHD, MASANTT, NGHDHLUC, KHUNGGIO)
-                             VALUES (@MAHD, @MASANTT, @NGHDHLUC, @Slot)";
+            string insertHoaDonQuery = @"INSERT INTO HOADON (MAHD, USERNAME, NGTTOAN, TRIGIA, MAGIAMGIA, PHUONGTHUCTT, TINHTRANGHD) 
+                                 VALUES (@MAHD, @USERNAME, @NGTTOAN, @TRIGIA, @MAGIAMGIA, @PHUONGTHUCTT, @TINHTRANGHD)";
+            string query = @"INSERT INTO CTHD (MAHD, MASANTT, NGHDHLUC, SANDAT, KHUNGGIO, MONTHETHAO)
+                     VALUES (@MAHD, @MASANTT, @NGHDHLUC, @SANDAT, @KHUNGGIO, @SPORT)"; 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -193,16 +192,28 @@ namespace Quan_ly_san_the_thao
                 {
                     command.Parameters.AddWithValue("@MAHD", ID);
                     command.Parameters.AddWithValue("@USERNAME", userData["USERNAME"]);
-                    command.Parameters.AddWithValue("@TRIGIA", (int)((double)totalPrice*1.08));
-                    command.Parameters.AddWithValue("@NGTTOAN", selectedDay.Date);
+                    command.Parameters.AddWithValue("@TRIGIA", (int)((double)totalPrice * 1.08));
+                    command.Parameters.AddWithValue("@NGTTOAN", DateTime.Today);
+                    command.Parameters.AddWithValue("@MAGIAMGIA", DBNull.Value);
+                    command.Parameters.AddWithValue("@PHUONGTHUCTT", paymentMethod);
+                    command.Parameters.AddWithValue("@TINHTRANGHD", invoiceStatus);
                     command.ExecuteNonQuery();
                 }
+
+                char[] sandatArr = { '0', '0', '0' };
+                sandatArr[selectedField - 1] = '1';
+                string sandatStr = new string(sandatArr);
+                string masantt = $"SANTT0{selectedField}";
+                string khunggio = selectedSlot.ToString();
+
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@MAHD", ID);
-                    command.Parameters.AddWithValue("@MASANTT", sportID);
+                    command.Parameters.AddWithValue("@MASANTT", masantt);
                     command.Parameters.AddWithValue("@NGHDHLUC", selectedDay);
-                    command.Parameters.AddWithValue("@Slot", selectedSlot);
+                    command.Parameters.AddWithValue("@SANDAT", sandatStr);
+                    command.Parameters.AddWithValue("@KHUNGGIO", khunggio);
+                    command.Parameters.AddWithValue("@SPORT", currentSport);
                     command.ExecuteNonQuery();
                 }
             }
@@ -217,12 +228,17 @@ namespace Quan_ly_san_the_thao
             this.Close();
         }
 
-        
+        private void btn_Return_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            MainMenu mainMenu = new MainMenu(userData["USERNAME"].ToString());  // Create an instance of the MainMenu form
+            mainMenu.Show();
+        }
 
         private void TimeSelection_Shown(object sender, EventArgs e)
         {
             string sportShowing = currentSport;
-            string query = "SELECT GTSANG, GTTRUA, GTTOI, MASANTT FROM SANTHETHAO WHERE MONTHETHAO = @Sport";
+            string query = "SELECT GTSANG, GTCHIEU, GTTOI, MASANTT FROM SANTHETHAO WHERE MONTHETHAO = @Sport";
             using (SqlConnection connection = new SqlConnection(connectionString))
             using (SqlCommand command = new SqlCommand(query, connection))
             {
@@ -232,15 +248,15 @@ namespace Quan_ly_san_the_thao
                 {
                     reader.Read();
                     decimal gtsang = reader.GetDecimal(reader.GetOrdinal("GTSANG"));
-                    decimal gttrua = reader.GetDecimal(reader.GetOrdinal("GTTRUA"));
+                    decimal gtchieu = reader.GetDecimal(reader.GetOrdinal("GTCHIEU"));
                     decimal gttoi = reader.GetDecimal(reader.GetOrdinal("GTTOI"));
 
-                    string gtsangFormatted = $"{gtsang:0}.000VND";
-                    string gttruaFormatted = $"{gttrua:0}.000VND";
-                    string gttoiFormatted = $"{gttoi:0}.000VND";
+                    string gtsangFormatted = $"{gtsang:0}VND";
+                    string gtchieuFormatted = $"{gtchieu:0}VND";
+                    string gttoiFormatted = $"{gttoi:0}VND";
 
                     lb_MorningPrice.Text = gtsangFormatted;
-                    lb_AfternoonPrice.Text = gttruaFormatted;
+                    lb_AfternoonPrice.Text = gtchieuFormatted;
                     lb_EveningPrice.Text = gttoiFormatted;
 
                     sportID = reader.GetString(reader.GetOrdinal("MASANTT"));

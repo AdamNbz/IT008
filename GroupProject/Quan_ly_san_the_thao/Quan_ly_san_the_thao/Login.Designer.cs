@@ -39,9 +39,9 @@
             this.lb_Login = new System.Windows.Forms.Label();
             this.lb_Copyright = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_Show = new System.Windows.Forms.Button();
             this.btn_Close = new System.Windows.Forms.Button();
             this.btn_Hide = new System.Windows.Forms.Button();
-            this.btn_Show = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -50,7 +50,7 @@
             // 
             this.lb_Username.AutoSize = true;
             this.lb_Username.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Username.Location = new System.Drawing.Point(124, 128);
+            this.lb_Username.Location = new System.Drawing.Point(116, 131);
             this.lb_Username.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
             this.lb_Username.Name = "lb_Username";
             this.lb_Username.Size = new System.Drawing.Size(120, 17);
@@ -61,7 +61,7 @@
             // 
             this.lb_Password.AutoSize = true;
             this.lb_Password.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Password.Location = new System.Drawing.Point(164, 168);
+            this.lb_Password.Location = new System.Drawing.Point(156, 171);
             this.lb_Password.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
             this.lb_Password.Name = "lb_Password";
             this.lb_Password.Size = new System.Drawing.Size(78, 17);
@@ -71,7 +71,7 @@
             // tb_Username
             // 
             this.tb_Username.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Username.Location = new System.Drawing.Point(265, 126);
+            this.tb_Username.Location = new System.Drawing.Point(257, 129);
             this.tb_Username.Margin = new System.Windows.Forms.Padding(2);
             this.tb_Username.Name = "tb_Username";
             this.tb_Username.Size = new System.Drawing.Size(225, 24);
@@ -80,7 +80,7 @@
             // tb_Password
             // 
             this.tb_Password.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Password.Location = new System.Drawing.Point(265, 166);
+            this.tb_Password.Location = new System.Drawing.Point(257, 169);
             this.tb_Password.Margin = new System.Windows.Forms.Padding(2);
             this.tb_Password.Name = "tb_Password";
             this.tb_Password.Size = new System.Drawing.Size(225, 24);
@@ -89,11 +89,11 @@
             // 
             // btn_Login
             // 
-            this.btn_Login.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Login.BackColor = System.Drawing.Color.Lime;
             this.btn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Login.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Login.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Login.Location = new System.Drawing.Point(193, 243);
+            this.btn_Login.Location = new System.Drawing.Point(185, 246);
             this.btn_Login.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(221, 40);
@@ -106,7 +106,7 @@
             // 
             this.llb_ForgotPassword.AutoSize = true;
             this.llb_ForgotPassword.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llb_ForgotPassword.Location = new System.Drawing.Point(379, 204);
+            this.llb_ForgotPassword.Location = new System.Drawing.Point(371, 207);
             this.llb_ForgotPassword.Margin = new System.Windows.Forms.Padding(2, 12, 2, 12);
             this.llb_ForgotPassword.Name = "llb_ForgotPassword";
             this.llb_ForgotPassword.Size = new System.Drawing.Size(111, 14);
@@ -120,7 +120,7 @@
             // 
             this.lb_SignIn.AutoSize = true;
             this.lb_SignIn.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_SignIn.Location = new System.Drawing.Point(190, 300);
+            this.lb_SignIn.Location = new System.Drawing.Point(182, 303);
             this.lb_SignIn.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
             this.lb_SignIn.Name = "lb_SignIn";
             this.lb_SignIn.Size = new System.Drawing.Size(128, 14);
@@ -131,7 +131,7 @@
             // 
             this.llb_SignIn.AutoSize = true;
             this.llb_SignIn.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llb_SignIn.Location = new System.Drawing.Point(316, 300);
+            this.llb_SignIn.Location = new System.Drawing.Point(308, 303);
             this.llb_SignIn.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.llb_SignIn.Name = "llb_SignIn";
             this.llb_SignIn.Size = new System.Drawing.Size(98, 14);
@@ -145,7 +145,7 @@
             // 
             this.lb_Login.AutoSize = true;
             this.lb_Login.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Login.Location = new System.Drawing.Point(176, 66);
+            this.lb_Login.Location = new System.Drawing.Point(168, 69);
             this.lb_Login.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_Login.Name = "lb_Login";
             this.lb_Login.Size = new System.Drawing.Size(272, 26);
@@ -175,6 +175,21 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "QUẢN LÝ SÂN THỂ THAO";
             // 
+            // btn_Show
+            // 
+            this.btn_Show.BackColor = System.Drawing.SystemColors.Window;
+            this.btn_Show.BackgroundImage = global::Quan_ly_san_the_thao.Properties.Resources.view;
+            this.btn_Show.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Show.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Show.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_Show.Location = new System.Drawing.Point(456, 169);
+            this.btn_Show.Name = "btn_Show";
+            this.btn_Show.Size = new System.Drawing.Size(26, 24);
+            this.btn_Show.TabIndex = 16;
+            this.btn_Show.UseVisualStyleBackColor = false;
+            this.btn_Show.Click += new System.EventHandler(this.btn_Show_Click);
+            // 
             // btn_Close
             // 
             this.btn_Close.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -198,27 +213,12 @@
             this.btn_Hide.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Hide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Hide.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Hide.Location = new System.Drawing.Point(464, 166);
+            this.btn_Hide.Location = new System.Drawing.Point(456, 169);
             this.btn_Hide.Name = "btn_Hide";
             this.btn_Hide.Size = new System.Drawing.Size(26, 24);
             this.btn_Hide.TabIndex = 17;
             this.btn_Hide.UseVisualStyleBackColor = false;
             this.btn_Hide.Click += new System.EventHandler(this.btn_Hide_Click);
-            // 
-            // btn_Show
-            // 
-            this.btn_Show.BackColor = System.Drawing.SystemColors.Window;
-            this.btn_Show.BackgroundImage = global::Quan_ly_san_the_thao.Properties.Resources.view;
-            this.btn_Show.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Show.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Show.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Show.Location = new System.Drawing.Point(464, 166);
-            this.btn_Show.Name = "btn_Show";
-            this.btn_Show.Size = new System.Drawing.Size(26, 24);
-            this.btn_Show.TabIndex = 16;
-            this.btn_Show.UseVisualStyleBackColor = false;
-            this.btn_Show.Click += new System.EventHandler(this.btn_Show_Click);
             // 
             // pictureBox1
             // 
@@ -259,6 +259,7 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginForm_FormClosing);
             this.Enter += new System.EventHandler(this.btn_Login_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

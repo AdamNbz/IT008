@@ -20,32 +20,21 @@ namespace Quan_ly_san_the_thao
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            if (tb_Username.Text == "" || tb_Password.Text == "")
+            if (string.IsNullOrWhiteSpace(tb_Password.Text) || string.IsNullOrWhiteSpace(tb_Username.Text))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            DatabaseHelper dbHelper = new DatabaseHelper();
-            DataRow dr = dbHelper.GetUsernameAndPwd(tb_Username.Text);
-            if (dr[1].ToString() == tb_Password.Text)
+            DataRow credentials = new DatabaseHelper().GetCredentials(tb_Username.Text);
+            if (credentials != null && credentials[1].ToString() == tb_Password.Text)
             {
-                MessageBox.Show("Đăng nhập thành công");
+                MessageBox.Show("Đăng nhập thành công!", "Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
-
-                Thread t = new Thread(() =>
-                {
-                    MainMenu sportListForm = new MainMenu(tb_Username.Text);
-                    Application.Run(sportListForm);
-                });
-                t.SetApartmentState(ApartmentState.STA);
-                t.Start();
-                t.Join();
+                if (tb_Username.Text == "admin") new AdminMenu(tb_Username.Text).Show();
+                else new MainMenu(tb_Username.Text).Show();
             }
-            else
-            {
-                MessageBox.Show("Sai username hoặc password");
-            }
+            else MessageBox.Show("Sai username hoặc password!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void llb_SignIn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -58,7 +47,10 @@ namespace Quan_ly_san_the_thao
 
         private void llb_ForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("Liên hệ quản trị viên để lấy lại mật khẩu!\nEmail ADMIN: contact.adamnguyen@gmail.com.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (new DatabaseHelper().SendPasswordResetRequest(tb_Username.Text))
+                MessageBox.Show("Đã gửi yêu cầu reset mật khẩu đến quản trị viên!\nHãy đợi trong 30 phút và sử dụng mật khẩu glorymanunited để đăng nhập và đổi mật khẩu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show("Gửi yêu cầu thất bại. Vui lòng thử lại sau.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btn_Show_Click(object sender, EventArgs e)
@@ -76,6 +68,11 @@ namespace Quan_ly_san_the_thao
         private void btn_Close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

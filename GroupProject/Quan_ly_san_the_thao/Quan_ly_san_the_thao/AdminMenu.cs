@@ -12,12 +12,12 @@ using System.Globalization;
 
 namespace Quan_ly_san_the_thao
 {
-    public partial class MainMenu : Form
+    public partial class AdminMenu : Form
     {
         string username;
         DataRow userDetails;
         private Form currentSubForm;
-        public MainMenu(string loggedUser)
+        public AdminMenu(string loggedUser)
         {
             InitializeComponent();
             InitializeMenu();
@@ -25,10 +25,7 @@ namespace Quan_ly_san_the_thao
             Console.OutputEncoding = Encoding.Unicode;
             Console.InputEncoding = Encoding.Unicode;
             userDetails = new DatabaseHelper().GetUserDetails(username);
-            string[] parts = userDetails["TENKH"].ToString().Split(' ');
-            string name = parts[parts.Length - 1];
-            lb_Hello.Text = "Xin chào, " + name.ToString(new CultureInfo("vi-VN")) + "!";
-            lb_Balance.Text = "Số dư: " + Convert.ToInt64(userDetails["SODU"]).ToString("N0", new CultureInfo("vi-VN")) + " VND";
+            lb_customerCount.Text = "Số lượng khách hàng: " + new DatabaseHelper().GetCustomerCount().ToString();
         }
 
         private void OpenSubForm(Form subForm)
@@ -96,32 +93,6 @@ namespace Quan_ly_san_the_thao
             ShowSubMenu(pn_settingSubmenu);
         }
 
-        private void btn_Profile_Click(object sender, EventArgs e)
-        {
-            OpenSubForm(new Profile(userDetails));
-            HideSubMenu();
-        }
-
-        private void btn_ChangePW_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            new ChangePassword(username).ShowDialog();
-            this.Show();
-            HideSubMenu();
-        }
-
-        private void btn_Donate_Click(object sender, EventArgs e)
-        {
-            OpenSubForm(new Deposit(username, userDetails["SODU"].ToString()));
-            HideSubMenu();
-        }
-
-        private void btn_SelectField_Click(object sender, EventArgs e)
-        {
-            OpenSubForm(new SportSelection(username));
-            HideSubMenu();
-        }
-
         private void btn_Logout_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -132,6 +103,30 @@ namespace Quan_ly_san_the_thao
         private void btn_Close_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btn_DiscountSettings_Click(object sender, EventArgs e)
+        {
+            OpenSubForm(new Coupon());
+            HideSubMenu();
+        }
+
+        private void btn_CustomerList_Click(object sender, EventArgs e)
+        {
+            OpenSubForm(new Customer());
+            HideSubMenu();
+        }
+
+        private void btn_BillList_Click(object sender, EventArgs e)
+        {
+            OpenSubForm(new BillList());
+            HideSubMenu();
+        }
+
+        private void btn_PriceChange_Click(object sender, EventArgs e)
+        {
+            OpenSubForm(new PriceAdjustment());
+            HideSubMenu();
         }
     }
 }
