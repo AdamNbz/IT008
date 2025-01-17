@@ -5,7 +5,7 @@
 </p>
 
 <!-- Title -->
-<h1 align="center"><b>IT008.P11 - LẬP TRÌNH TRỰC QUAN</b></h1>
+<h1 align="center"><b>IT008 - LẬP TRÌNH TRỰC QUAN</b></h1>
 
 
 
