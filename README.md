@@ -21,7 +21,7 @@
 * **Tên môn học**: Lập trình trực quan - VISUAL PROGRAMMING
 * **Mã môn học**: IT008
 * **Lớp học**: IT008.P11
-* **Năm học**: 2023-2024
+* **Năm học**: 2024-2025
 
 
 ## GIẢNG VIÊN HƯỚNG DẪN
