@@ -42,4 +42,4 @@
 ## ĐỒ ÁN MÔN HỌC
 <a name="doan"></a>
 1. Đồ án cá nhân: ỨNG DỤNG QUẢN LÝ SINH VIÊN
-2. Đồ án Nhóm: ỨNG DỤNG QUẢN LÝ ĐẶT SÂN THỂ THẢO
+2. Đồ án Nhóm: ỨNG DỤNG QUẢN LÝ ĐẶT SÂN THỂ THAO
